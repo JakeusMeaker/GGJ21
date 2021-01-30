@@ -222,7 +222,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3019865e3ba48404399589325bd3b4a9, type: 3}
-  m_Color: {r: 0.21568629, g: 0.6784314, b: 0.83921576, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -303,7 +303,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3019865e3ba48404399589325bd3b4a9, type: 3}
-  m_Color: {r: 0.21568629, g: 0.6784314, b: 0.83921576, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -535,6 +535,8 @@ MonoBehaviour:
   - {fileID: 2001641937331787639, guid: 737a48d4e826651438fa15a6d32ce02e, type: 3}
   LRUDrooms:
   - {fileID: 6976178719474684747, guid: ba2c3614812eabb45ad8aabd11a7ff3e, type: 3}
+  playerGO: {fileID: 0}
+  monsterGO: {fileID: 0}
   minX: -15
   maxX: 25
   minY: -15
@@ -657,7 +659,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3019865e3ba48404399589325bd3b4a9, type: 3}
-  m_Color: {r: 0.21568629, g: 0.6784314, b: 0.83921576, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -738,7 +740,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3019865e3ba48404399589325bd3b4a9, type: 3}
-  m_Color: {r: 0.21568629, g: 0.6784314, b: 0.83921576, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -824,7 +826,7 @@ GameObject:
   - component: {fileID: 2136944567}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

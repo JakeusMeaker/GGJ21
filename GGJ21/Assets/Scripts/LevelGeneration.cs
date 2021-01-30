@@ -10,6 +10,9 @@ public class LevelGeneration : MonoBehaviour
     public GameObject[] LRUrooms;
     public GameObject[] LRUDrooms;
 
+    public GameObject playerGO;
+    public GameObject monsterGO;
+
     public float minX;
     public float maxX;
     public float minY;
@@ -37,20 +40,21 @@ public class LevelGeneration : MonoBehaviour
         previousRooms.Push(newRoom);
 
         direction = Random.Range(1, 6);
+        Move();
     }
 
-    private void Update()
-    {
-        if (timeBetweenRoom <= 0 && !stopGeneration)
-        {
-            Move();
-            timeBetweenRoom = startTimeBetweemRoom;
-        }
-        else
-        {
-            timeBetweenRoom -= Time.deltaTime;
-        }
-    }
+    //private void Update()
+    //{
+    //    if (timeBetweenRoom <= 0 && !stopGeneration)
+    //    {
+    //        Move();
+    //        timeBetweenRoom = startTimeBetweemRoom;
+    //    }
+    //    else
+    //    {
+    //        timeBetweenRoom -= Time.deltaTime;
+    //    }
+    //}
 
     private void Move()
     {
@@ -81,10 +85,12 @@ public class LevelGeneration : MonoBehaviour
                 {
                     direction = 5;
                 }
+                Move();
             }
             else
             {
                 direction = 5;
+                Move();
             }
         }
         else if (direction == 3 || direction == 4)
@@ -107,10 +113,12 @@ public class LevelGeneration : MonoBehaviour
                 {
                     direction = 5;
                 }
+                Move();
             }
             else
             {
                 direction = 5;
+                Move();
             }
         }
         else if (direction == 5)
@@ -162,12 +170,14 @@ public class LevelGeneration : MonoBehaviour
                         stopGeneration = true;
                     }
                 }
+                Move();
             }
             else
             {
                 stopGeneration = true;
             }
         }
+        
     }
 
     void OnDrawGizmos()
