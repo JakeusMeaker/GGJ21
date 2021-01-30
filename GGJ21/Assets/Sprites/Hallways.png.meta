@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9655bc4225d5bcb48af041353e83d072
+guid: cf84ac84bc3875e44afb094d4d4e02d5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -941769597684628784
-    second: Rooms_0
+      213: 2160166031265171750
+    second: Hallways_0
   - first:
-      213: -1992961250559644022
-    second: Rooms_1
+      213: 6265410792940086303
+    second: Hallways_1
   - first:
-      213: -2151989937092700874
-    second: Rooms_2
+      213: 5380314802731868821
+    second: Hallways_2
   - first:
-      213: 2040186390466137041
-    second: Rooms_3
+      213: 2449407945235683404
+    second: Hallways_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,7 +99,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rooms_0
+      name: Hallways_0
       rect:
         serializedVersion: 2
         x: 0
@@ -113,14 +113,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d2ceb56a892ee2f0800000000000000
-      internalID: -941769597684628784
+      spriteID: 6290d657f837afd10800000000000000
+      internalID: 2160166031265171750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rooms_1
+      name: Hallways_1
       rect:
         serializedVersion: 2
         x: 320
@@ -134,14 +134,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a8e26414d449754e0800000000000000
-      internalID: -1992961250559644022
+      spriteID: f14a71dabe533f650800000000000000
+      internalID: 6265410792940086303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rooms_2
+      name: Hallways_2
       rect:
         serializedVersion: 2
         x: 0
@@ -155,14 +155,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 635df5fcd889222e0800000000000000
-      internalID: -2151989937092700874
+      spriteID: 592eb949ec7baaa40800000000000000
+      internalID: 5380314802731868821
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rooms_3
+      name: Hallways_3
       rect:
         serializedVersion: 2
         x: 320
@@ -176,8 +176,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1db025776b2305c10800000000000000
-      internalID: 2040186390466137041
+      spriteID: c48dac57c8b0ef120800000000000000
+      internalID: 2449407945235683404
       vertices: []
       indices: 
       edges: []
