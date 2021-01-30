@@ -22,7 +22,7 @@ public class LevelGeneration : MonoBehaviour
     private const float moveAmount = 10;
 
     private float timeBetweenRoom;
-    private float startTimeBetweemRoom = 0.25f;
+    private float startTimeBetweemRoom = 0.001f;
 
     private bool stopGeneration;
 
@@ -33,7 +33,8 @@ public class LevelGeneration : MonoBehaviour
     {
         int randStartPos = Random.Range(0, startPositions.Length);
         transform.position = startPositions[randStartPos].position;
-        Instantiate(LRUDrooms[0], transform.position, Quaternion.identity);
+        GameObject newRoom = Instantiate(LRrooms[0], transform.position, Quaternion.identity);
+        previousRooms.Push(newRoom);
 
         direction = Random.Range(1, 6);
     }
@@ -115,43 +116,26 @@ public class LevelGeneration : MonoBehaviour
         else if (direction == 5)
         {
             if (transform.position.y > minY)
-            {  
-                if (previousRooms.Peek().GetComponent<RoomType>().type != 1 &&
-                        previousRooms.Peek().GetComponent<RoomType>().type != 3)
+            {
+                if (previousRooms.Count > 0)
                 {
-                    previousRooms.Peek().GetComponent<RoomType>().RoomDestruction();
-                    int decideRoom = Random.Range(0, 2);
-                    if (decideRoom == 0)
+                    if (previousRooms.Peek().GetComponent<RoomType>().type != 1 &&
+                            previousRooms.Peek().GetComponent<RoomType>().type != 3)
                     {
-                        int randTopRoom = Random.Range(0, LRDrooms.Length);
-                        GameObject newRoom = Instantiate(LRDrooms[randTopRoom], transform.position, Quaternion.identity);
-                        previousRooms.Push(newRoom);
+                        previousRooms.Peek().GetComponent<RoomType>().RoomDestruction();
+                        int randBottomRoom = Random.Range(0, LRUDrooms.Length);
+                        GameObject newRoomGO = Instantiate(LRUDrooms[randBottomRoom], transform.position, Quaternion.identity);
+                        previousRooms.Push(newRoomGO);
                     }
-                    else
-                    {
-                        int randTopRoom = Random.Range(0, LRDrooms.Length);
-                        GameObject newRoom = Instantiate(LRUDrooms[randTopRoom], transform.position, Quaternion.identity);
-                        previousRooms.Push(newRoom);
-                    }
-
                 }
 
                 Vector2 newPos = new Vector2(transform.position.x, transform.position.y - moveAmount);
                 transform.position = newPos;
 
-                int coinFlip = Random.Range(0, 2);
-                if (coinFlip == 0)
-                {
-                    int randTopRoom = Random.Range(0, LRDrooms.Length);
-                    GameObject newRoom = Instantiate(LRDrooms[randTopRoom], transform.position, Quaternion.identity);
-                    previousRooms.Push(newRoom);
-                }
-                else
-                {
-                    int randTopRoom = Random.Range(0, LRDrooms.Length);
-                    GameObject newRoom = Instantiate(LRUDrooms[randTopRoom], transform.position, Quaternion.identity);
-                    previousRooms.Push(newRoom);
-                }              
+                int randTopRoom = Random.Range(0, LRUrooms.Length);
+                GameObject newRoom = Instantiate(LRUrooms[randTopRoom], transform.position, Quaternion.identity);
+                previousRooms.Push(newRoom);
+
 
                 direction = Random.Range(1, 6);
                 if (transform.position.x < maxX)
@@ -183,7 +167,7 @@ public class LevelGeneration : MonoBehaviour
             {
                 stopGeneration = true;
             }
-        }        
+        }
     }
 
     void OnDrawGizmos()
