@@ -495,11 +495,21 @@ MonoBehaviour:
   - {fileID: 1210164017}
   - {fileID: 824609568}
   - {fileID: 1994823730}
-  rooms:
+  LRrooms:
   - {fileID: 5044592089802015610, guid: b29e83a736414a748b94eaf49d992ac8, type: 3}
+  LRDrooms:
   - {fileID: 369476722270542587, guid: d35248c606e4fab47b21d97f3568ab9f, type: 3}
+  LRUrooms:
   - {fileID: 2001641937331787639, guid: 737a48d4e826651438fa15a6d32ce02e, type: 3}
+  LRUDrooms:
   - {fileID: 6976178719474684747, guid: ba2c3614812eabb45ad8aabd11a7ff3e, type: 3}
+  minX: -15
+  maxX: 25
+  minY: -15
+  gizmoRadius: 6
+  room:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &937989010
 Transform:
   m_ObjectHideFlags: 0
