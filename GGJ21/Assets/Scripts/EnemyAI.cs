@@ -8,6 +8,8 @@ public class EnemyAI : MonoBehaviour
     public float runSpeed = 2f;
     public Transform targetPosition;
 
+    public GameObject player;
+
     [SerializeField] Sprite defaultSprite;
 
     private float horizontal;
@@ -37,6 +39,12 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Vector2.Distance(transform.position, player.transform.position) < 10)
+        {
+            targetPosition = player.transform;
+        }
+
+
         if (path == null)
         {
             return;
@@ -139,5 +147,12 @@ public class EnemyAI : MonoBehaviour
             path = p;
             currentWaypoint = 0;
         }
+    }
+
+    void OnDrawGizmos()
+    {
+        // Display the explosion radius when selected
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, 10);
     }
 }

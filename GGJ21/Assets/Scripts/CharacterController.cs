@@ -7,6 +7,10 @@ public class CharacterController : MonoBehaviour
     public float runSpeed = 20f;
     public float sprintSpeed = 5;
 
+    public GameObject flashLight;
+
+    public Vector3[] flashlightPositions; // 0 = down , 1 = left, 2 = top, 3 = right
+
     [SerializeField]private Sprite defaultSprite;
 
     private float horizontal;
@@ -32,29 +36,33 @@ public class CharacterController : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         vertical = Input.GetAxisRaw("Vertical");
 
-        if(horizontal > 0.5f)
+        if(horizontal > 0.5f) // right
         {
             sr.flipX = true;
             anim.SetBool("Sideways", true);
             anim.SetBool("Vertical", false);
+            flashLight.transform.eulerAngles = flashlightPositions[0];
         }
-        else if(horizontal < -0.5f)
+        else if(horizontal < -0.5f) //left
         {
             sr.flipX = false;
             anim.SetBool("Sideways", true);
             anim.SetBool("Vertical", false);
+            flashLight.transform.eulerAngles = flashlightPositions[1];
         }
-        else if(vertical > 0.5f)
+        else if(vertical > 0.5f) //up
         {
             sr.flipY = true;
             anim.SetBool("Vertical", true);
             anim.SetBool("Sideways", false);
+            flashLight.transform.eulerAngles = flashlightPositions[2];
         }
-        else if (vertical < -0.5f)
+        else if (vertical < -0.5f) //down
         {
             sr.flipY = false;
             anim.SetBool("Vertical", true);
             anim.SetBool("Sideways", false);
+            flashLight.transform.eulerAngles = flashlightPositions[3];
         }
         else
         {
