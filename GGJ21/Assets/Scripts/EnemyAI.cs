@@ -25,10 +25,7 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        seeker = GetComponent<Seeker>();
-        sr.sprite = defaultSprite;
-
-        seeker.StartPath(transform.position, targetPosition.position, OnPathComplete);
+        sr.sprite = defaultSprite;        
     }
 
     // Update is called once per frame
@@ -66,21 +63,20 @@ public class EnemyAI : MonoBehaviour
             anim.SetBool("Vertical", false);
             sr.sprite = defaultSprite;
         }
+
+        Pathfind();
     }
 
     public void StartPathfinding()
     {
-        
+
+        seeker = GetComponent<Seeker>();
+        Pathfind();
     }
 
-    void Wander()
+    void Pathfind()
     {
-
-    }
-
-    void ChasePlayer()
-    {
-
+        seeker.StartPath(transform.position, targetPosition.position, OnPathComplete);
     }
 
     void OnPathComplete(Path p)

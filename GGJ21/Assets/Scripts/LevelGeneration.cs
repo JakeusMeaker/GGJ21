@@ -192,7 +192,11 @@ public class LevelGeneration : MonoBehaviour
 
         gridGraph.SetDimensions(width, height, nodeSize);
 
-        AstarPath.active.Scan();
+
+        Debug.Log("Rescanning");
+        AstarPath.active.Scan(gridGraph);
+
+        StartMonsterAI();
     }
 
     void StartMonsterAI()
