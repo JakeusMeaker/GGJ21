@@ -132,7 +132,7 @@ public class EnemyAI : MonoBehaviour
 
     void OnPathComplete(Path p)
     {
-        Debug.Log("Path Found" + p.error);
+        //Debug.Log("Path Found" + p.error);
 
         if (!p.error)
         {

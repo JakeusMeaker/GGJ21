@@ -36,7 +36,7 @@ public class LevelGeneration : MonoBehaviour
     {
         int randStartPos = Random.Range(0, startPositions.Length);
         transform.position = startPositions[randStartPos].position;
-        GameObject newRoom = Instantiate(StartRoom, transform.position, Quaternion.identity);
+        GameObject newRoom = Instantiate(startRoom, transform.position, Quaternion.identity);
         previousRooms.Push(newRoom);
 
         direction = Random.Range(1, 6);
@@ -161,6 +161,13 @@ public class LevelGeneration : MonoBehaviour
             }
             else
             {
+                Debug.Log("Adding Exit room");
+                transform.position = previousRooms.Peek().transform.position;
+                Destroy(previousRooms.Peek());
+                previousRooms.Pop();
+                GameObject newRoom = Instantiate(endRoom, transform.position, Quaternion.identity);
+                previousRooms.Push(newRoom);
+
                 SetPlayerMonsterPositions();
                 SpawnGraphGrid();
             }
@@ -203,6 +210,7 @@ public class LevelGeneration : MonoBehaviour
 
     void StartMonsterAI()
     {
+        Debug.Log("Starting Monster");
         monsterGO.GetComponent<EnemyAI>().StartPathfinding();
     }
 
