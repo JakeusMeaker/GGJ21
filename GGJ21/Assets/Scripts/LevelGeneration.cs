@@ -10,6 +10,8 @@ public class LevelGeneration : MonoBehaviour
     public GameObject[] LRDrooms;
     public GameObject[] LRUrooms;
     public GameObject[] LRUDrooms;
+    public GameObject startRoom;
+    public GameObject endRoom;
 
     public GameObject playerGO;
     public GameObject monsterGO;
@@ -34,7 +36,7 @@ public class LevelGeneration : MonoBehaviour
     {
         int randStartPos = Random.Range(0, startPositions.Length);
         transform.position = startPositions[randStartPos].position;
-        GameObject newRoom = Instantiate(LRrooms[0], transform.position, Quaternion.identity);
+        GameObject newRoom = Instantiate(StartRoom, transform.position, Quaternion.identity);
         previousRooms.Push(newRoom);
 
         direction = Random.Range(1, 6);

@@ -719,13 +719,31 @@ MonoBehaviour:
   - {fileID: 824609568}
   - {fileID: 1994823730}
   LRrooms:
-  - {fileID: 5044592089802015610, guid: b29e83a736414a748b94eaf49d992ac8, type: 3}
+  - {fileID: 4796378087898085036, guid: 9d81911cd7a4f404a9b88daad630c068, type: 3}
+  - {fileID: 3188701499340026108, guid: 688ca7cc4e5777a44bb1eab413a9b281, type: 3}
+  - {fileID: 6172781317930374543, guid: 12cc520a387b9e94aba9c7804fe1d932, type: 3}
+  - {fileID: 5044592089802015610, guid: cfb4542c7445df64cbbfa604aecbae95, type: 3}
+  - {fileID: 5044592089802015610, guid: 898e4decd94e0dc42902821e3e9fd864, type: 3}
   LRDrooms:
-  - {fileID: 369476722270542587, guid: d35248c606e4fab47b21d97f3568ab9f, type: 3}
+  - {fileID: 6848233656718072768, guid: 5b680aabace22334892981b4023f0407, type: 3}
+  - {fileID: 4940635915408327692, guid: fcfdd04c54c1e8c47b5a0ff0a8fb3814, type: 3}
+  - {fileID: 369476722270542587, guid: 52d5c26d28a8c264aabda70c745b1e65, type: 3}
+  - {fileID: 7241988881018827404, guid: 5016bcc8d053db7469d212170197d1a9, type: 3}
+  - {fileID: 1386737861748860254, guid: cbdfc5a1c0936df48921a06619855a49, type: 3}
   LRUrooms:
-  - {fileID: 2001641937331787639, guid: 737a48d4e826651438fa15a6d32ce02e, type: 3}
+  - {fileID: 718778676352324734, guid: 6d0f45357fa7bbd44b623b3f2ec591a8, type: 3}
+  - {fileID: 1531407014488359967, guid: 5ea23414bc53b7440bb3c0815323c07c, type: 3}
+  - {fileID: 1922453344780001006, guid: d2b196c4d893de64da13f931dfb395e0, type: 3}
+  - {fileID: 2001641937331787639, guid: 386bcf2afda46db47bb129e1dbd4f403, type: 3}
+  - {fileID: 5095815450778378329, guid: 2338cabf94d679349b2f24833493fd44, type: 3}
   LRUDrooms:
-  - {fileID: 6976178719474684747, guid: ba2c3614812eabb45ad8aabd11a7ff3e, type: 3}
+  - {fileID: 8241756007970575226, guid: 8ec80c71df25e2d4c897e60e40b794a1, type: 3}
+  - {fileID: 4428303271398357306, guid: 76f02945d921f974fbde1098c3dd62e6, type: 3}
+  - {fileID: 7363665222696534509, guid: 3a206de22e063f948af992f5c208e471, type: 3}
+  - {fileID: 547901975889402294, guid: 84580e4126ce7234aa905a1a6a91b031, type: 3}
+  - {fileID: 6976178719474684747, guid: 880ca856b0f711a4fb4aa9f183c14dec, type: 3}
+  StartRoom: {fileID: 0}
+  EndRoom: {fileID: 0}
   playerGO: {fileID: 2136944561}
   monsterGO: {fileID: 1927703341}
   middle: {fileID: 696723969}
@@ -1110,7 +1128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e244875a361037c4fb5f1cac8256eebb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 2
+  runSpeed: 6
   targetPosition: {fileID: 587114888}
   defaultSprite: {fileID: 1277351054071467552, guid: c7fc5319453bfbf43899024967f2abbf,
     type: 3}
@@ -1187,6 +1205,7 @@ GameObject:
   - component: {fileID: 2136944566}
   - component: {fileID: 2136944565}
   - component: {fileID: 2136944567}
+  - component: {fileID: 2136944568}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1291,7 +1310,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 2
-  sprintSpeed: 0
+  sprintSpeed: 3
   defaultSprite: {fileID: 685964662446525828, guid: 6e79c88961804e24cbbe839bc712bb4a,
     type: 3}
 --- !u!50 &2136944566
@@ -1302,19 +1321,19 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2136944561}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &2136944567
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1356,3 +1375,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!58 &2136944568
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2136944561}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.03}
+  serializedVersion: 2
+  m_Radius: 0.23097515
