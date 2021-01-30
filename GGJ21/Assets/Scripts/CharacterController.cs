@@ -6,7 +6,7 @@ public class CharacterController : MonoBehaviour
 {
     public float runSpeed = 20f;
 
-    [SerializeField] Sprite defaultSprite;
+    [SerializeField]private Sprite defaultSprite;
 
     private float horizontal;
     private float vertical;

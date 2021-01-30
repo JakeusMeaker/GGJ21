@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Pathfinding;
 
 public class LevelGeneration : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class LevelGeneration : MonoBehaviour
     public GameObject playerGO;
     public GameObject monsterGO;
 
+    public Transform middle;
+
     public float minX;
     public float maxX;
     public float minY;
@@ -23,11 +26,6 @@ public class LevelGeneration : MonoBehaviour
 
     private int direction;
     private const float moveAmount = 10;
-
-    private float timeBetweenRoom;
-    private float startTimeBetweemRoom = 0.001f;
-
-    private bool stopGeneration;
 
     private Stack<GameObject> previousRooms = new Stack<GameObject>();
 
@@ -42,19 +40,6 @@ public class LevelGeneration : MonoBehaviour
         direction = Random.Range(1, 6);
         Move();
     }
-
-    //private void Update()
-    //{
-    //    if (timeBetweenRoom <= 0 && !stopGeneration)
-    //    {
-    //        Move();
-    //        timeBetweenRoom = startTimeBetweemRoom;
-    //    }
-    //    else
-    //    {
-    //        timeBetweenRoom -= Time.deltaTime;
-    //    }
-    //}
 
     private void Move()
     {
@@ -167,17 +152,52 @@ public class LevelGeneration : MonoBehaviour
                     }
                     else
                     {
-                        stopGeneration = true;
+                        SetPlayerMonsterPositions();
                     }
                 }
                 Move();
             }
             else
             {
-                stopGeneration = true;
+                SetPlayerMonsterPositions();
+                SpawnGraphGrid();
             }
         }
-        
+
+    }
+
+    void SetPlayerMonsterPositions()
+    {
+        monsterGO.transform.position = previousRooms.Peek().transform.position;
+
+        for (int i = previousRooms.Count; i > 1; i--)
+        {
+            previousRooms.Pop();
+        }
+
+        playerGO.transform.position = previousRooms.Peek().transform.position;
+    }
+
+    void SpawnGraphGrid()
+    {
+        AstarData data = AstarPath.active.data;
+
+        GridGraph gridGraph = data.gridGraph;
+
+        int width = 50;
+        int height = 50;
+        float nodeSize = 1;
+
+        gridGraph.center = middle.position;
+
+        gridGraph.SetDimensions(width, height, nodeSize);
+
+        AstarPath.active.Scan();
+    }
+
+    void StartMonsterAI()
+    {
+        monsterGO.GetComponent<EnemyAI>().StartPathfinding();
     }
 
     void OnDrawGizmos()
