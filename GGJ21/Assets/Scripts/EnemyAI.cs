@@ -45,6 +45,7 @@ public class EnemyAI : MonoBehaviour
         }
 
 
+
         if (path == null)
         {
             return;
