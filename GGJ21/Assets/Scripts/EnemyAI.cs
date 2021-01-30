@@ -5,7 +5,7 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-    public float runSpeed = 20f;
+    public float runSpeed = 2f;
     public Transform targetPosition;
 
     [SerializeField] Sprite defaultSprite;
@@ -17,7 +17,13 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator anim;
+
     private Seeker seeker;
+    private Path path;
+    private float nextWaypointDistance = 3;
+    private int currentWaypoint = 0;
+    public bool reachedEndOfPath;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +37,41 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (path == null)
+        {
+            return;
+        }
+
+        reachedEndOfPath = false;
+
+        float distanceToWaypoint;
+        while (true)
+        {
+            distanceToWaypoint = Vector3.Distance(transform.position, path.vectorPath[currentWaypoint]);
+            if (distanceToWaypoint < nextWaypointDistance)
+            {
+                if (currentWaypoint + 1 < path.vectorPath.Count)
+                {
+                    currentWaypoint++;
+                }
+                else
+                {
+                    reachedEndOfPath = true;
+                    break;
+                }
+            }
+            else break;
+        }
+
+        float speedFactor = reachedEndOfPath ? Mathf.Sqrt(distanceToWaypoint / nextWaypointDistance) : 1f;
+
+        Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
+
+        Vector2 velocity = dir * runSpeed * speedFactor;
+
+        horizontal += velocity.x * Time.deltaTime;
+        vertical += velocity.y * Time.deltaTime;
+
         if (horizontal > 0.5f)
         {
             sr.flipX = true;
@@ -67,9 +108,19 @@ public class EnemyAI : MonoBehaviour
         Pathfind();
     }
 
+    private void FixedUpdate()
+    {
+        if (horizontal != 0 && vertical != 0)
+        {
+            horizontal *= moveLimiter;
+            vertical *= moveLimiter;
+        }
+
+        rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
+
     public void StartPathfinding()
     {
-
         seeker = GetComponent<Seeker>();
         Pathfind();
     }
@@ -82,5 +133,11 @@ public class EnemyAI : MonoBehaviour
     void OnPathComplete(Path p)
     {
         Debug.Log("Path Found" + p.error);
+
+        if (!p.error)
+        {
+            path = p;
+            currentWaypoint = 0;
+        }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class CharacterController : MonoBehaviour
 {
     public float runSpeed = 20f;
+    public float sprintSpeed = 5;
 
     [SerializeField]private Sprite defaultSprite;
 
@@ -74,6 +75,13 @@ public class CharacterController : MonoBehaviour
             vertical *= moveLimiter;
         }
 
-        rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        if (Input.GetButton("Sprint"))
+        {
+            rb.velocity = new Vector2(horizontal * sprintSpeed, vertical * sprintSpeed);
+        }
+        else
+        {
+            rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+        }        
     }
 }
