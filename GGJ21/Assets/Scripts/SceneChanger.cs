@@ -28,7 +28,7 @@ public class SceneChanger : MonoBehaviour
 
     public void WinScene()
     {
-        SceneManager.LoadScene("SucessScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("SuccessScene", LoadSceneMode.Single);
     }
 
     public void FailScene()
