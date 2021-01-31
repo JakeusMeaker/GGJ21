@@ -384,12 +384,10 @@ MonoBehaviour:
   - {x: 0.5011395, y: -2.4991264, z: 0}
   - {x: 2.5, y: -2.5, z: 0}
   - {x: 2.497264, y: -0.499161, z: 0}
-  - {x: 2.2524195, y: -0.49736726, z: 0}
-  - {x: 2.2487822, y: -2.249405, z: 0}
-  - {x: 0.5016743, y: -2.2480717, z: 0}
-  m_ShapePathHash: 2147413677
+  - {x: 0.49779284, y: -0.49847728, z: 0}
+  m_ShapePathHash: -2146104109
   m_Mesh: {fileID: 0}
-  m_InstanceId: 48554
+  m_InstanceId: 55730
 --- !u!1 &2394778440007193253
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,12 +471,10 @@ MonoBehaviour:
   - {x: 0.49939442, y: -2.5003014, z: 0}
   - {x: 2.5, y: -2.5, z: 0}
   - {x: 2.497264, y: -0.499161, z: 0}
-  - {x: 2.2524195, y: -0.49736726, z: 0}
-  - {x: 2.247448, y: -2.2498474, z: 0}
-  - {x: 0.5007839, y: -2.2501984, z: 0}
-  m_ShapePathHash: 1193521101
+  - {x: 0.49962533, y: -0.5000642, z: 0}
+  m_ShapePathHash: 1052962225
   m_Mesh: {fileID: 0}
-  m_InstanceId: 48532
+  m_InstanceId: 55708
 --- !u!1 &4070647143532106770
 GameObject:
   m_ObjectHideFlags: 0
@@ -561,13 +557,11 @@ MonoBehaviour:
   m_ShapePath:
   - {x: -2.5, y: -2.5, z: 0}
   - {x: -0.4987607, y: -2.5, z: 0}
-  - {x: -0.49943805, y: -2.2478848, z: 0}
-  - {x: -2.247342, y: -2.250628, z: 0}
-  - {x: -2.2499752, y: -0.50079024, z: 0}
+  - {x: -0.497733, y: -0.49933594, z: 0}
   - {x: -2.499529, y: -0.501402, z: 0}
-  m_ShapePathHash: -1687021559
+  m_ShapePathHash: -624259815
   m_Mesh: {fileID: 0}
-  m_InstanceId: 48524
+  m_InstanceId: 55700
 --- !u!1 &6597773849129443763
 GameObject:
   m_ObjectHideFlags: 0
@@ -620,13 +614,11 @@ MonoBehaviour:
   m_ShapePath:
   - {x: -2.5, y: -2.5, z: 0}
   - {x: -0.50058806, y: -2.5002594, z: 0}
-  - {x: -0.50143266, y: -2.2468681, z: 0}
-  - {x: -2.247342, y: -2.250628, z: 0}
-  - {x: -2.2499752, y: -0.50079024, z: 0}
+  - {x: -0.50267005, y: -0.50375676, z: 0}
   - {x: -2.499529, y: -0.501402, z: 0}
-  m_ShapePathHash: 1270583991
+  m_ShapePathHash: -1067663861
   m_Mesh: {fileID: 0}
-  m_InstanceId: 48490
+  m_InstanceId: 55666
 --- !u!1 &7137531074049912428
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +910,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -196786
+      value: -233674
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -958,7 +950,7 @@ PrefabInstance:
     - target: {fileID: 172573344074149757, guid: 90da27e82bae26e4fb6adcddfcb5b414,
         type: 3}
       propertyPath: m_InstanceId
-      value: -196794
+      value: -233682
       objectReference: {fileID: 0}
     - target: {fileID: 3158270660369207614, guid: 90da27e82bae26e4fb6adcddfcb5b414,
         type: 3}
