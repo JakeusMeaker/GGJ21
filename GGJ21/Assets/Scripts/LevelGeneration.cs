@@ -32,6 +32,7 @@ public class LevelGeneration : MonoBehaviour
     private int direction;
     private const float moveAmount = 10;
 
+    [SerializeField]
     private Stack<GameObject> previousRooms = new Stack<GameObject>();
 
     // Start is called before the first frame update
@@ -40,6 +41,8 @@ public class LevelGeneration : MonoBehaviour
         int randStartPos = Random.Range(0, startPositions.Length);
         transform.position = startPositions[randStartPos].position;
         GameObject newRoom = Instantiate(startRoom, transform.position, Quaternion.identity);
+        GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
+        CheckDoors(doorways);
         previousRooms.Push(newRoom);
 
         direction = Random.Range(1, 6);
@@ -57,7 +60,8 @@ public class LevelGeneration : MonoBehaviour
 
                 int randRoom = Random.Range(0, LRrooms.Length);
                 GameObject newRoom = Instantiate(LRrooms[randRoom], transform.position, Quaternion.identity);
-                CheckDoors(newRoom.GetComponent<RoomType>().doorways);
+                GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
+                CheckDoors(doorways);
                 previousRooms.Push(newRoom);
 
                 direction = Random.Range(1, 6);
@@ -93,7 +97,8 @@ public class LevelGeneration : MonoBehaviour
 
                 int randRoom = Random.Range(0, LRrooms.Length);
                 GameObject newRoom = Instantiate(LRrooms[randRoom], transform.position, Quaternion.identity);
-                CheckDoors(newRoom.GetComponent<RoomType>().doorways);
+                GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
+                CheckDoors(doorways);
                 previousRooms.Push(newRoom);
 
                 direction = Random.Range(3, 6);
@@ -125,7 +130,8 @@ public class LevelGeneration : MonoBehaviour
                         previousRooms.Peek().GetComponent<RoomType>().RoomDestruction();
                         int randBottomRoom = Random.Range(0, LRUDrooms.Length);
                         GameObject newRoomGO = Instantiate(LRUDrooms[randBottomRoom], transform.position, Quaternion.identity);
-                        CheckDoors(newRoomGO.GetComponent<RoomType>().doorways);
+                        GameObject[] doorwaysGO = newRoomGO.GetComponent<RoomType>().doorways;
+                        CheckDoors(doorwaysGO);
                         previousRooms.Push(newRoomGO);
                     }
                 }
@@ -135,7 +141,8 @@ public class LevelGeneration : MonoBehaviour
 
                 int randTopRoom = Random.Range(0, LRUrooms.Length);
                 GameObject newRoom = Instantiate(LRUrooms[randTopRoom], transform.position, Quaternion.identity);
-                CheckDoors(newRoom.GetComponent<RoomType>().doorways);
+                GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
+                CheckDoors(doorways);
                 previousRooms.Push(newRoom);
 
 
@@ -173,7 +180,8 @@ public class LevelGeneration : MonoBehaviour
                 Destroy(previousRooms.Peek());
                 previousRooms.Pop();
                 GameObject newRoom = Instantiate(endRoom, transform.position, Quaternion.identity);
-                CheckDoors(newRoom.GetComponent<RoomType>().doorways);
+                GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
+                CheckDoors(doorways);
                 previousRooms.Push(newRoom);
 
                 SetPlayerMonsterPositions();
@@ -186,8 +194,8 @@ public class LevelGeneration : MonoBehaviour
     {
         for (int i = 0; i < doorways.Length; i++)
         {
-            Collider2D collider = Physics2D.OverlapCircle(doorways[i].transform.position, 0.5f, room);
-            if (collider != null)
+            Debug.Log("Checking for door");
+            if (Physics2D.OverlapCircle(doorways[i].transform.position, 5f, room))
             {
                 return;
             }
@@ -196,16 +204,16 @@ public class LevelGeneration : MonoBehaviour
                 switch (doorways[i].name)
                 {
                     case "CheckPointLeft":
-                        Instantiate(doorHorizontal, doorways[i].transform.position, Quaternion.identity);
+                        Instantiate(doorHorizontal, doorways[i].transform);
                         break;
                     case "CheckPointRight":
-                        Instantiate(doorHorizontal, doorways[i].transform.position, Quaternion.identity);
+                        Instantiate(doorHorizontal, doorways[i].transform);
                         break;
                     case "CheckPointUp":
-                        Instantiate(doorVertical, doorways[i].transform.position, Quaternion.identity);
+                        Instantiate(doorVertical, doorways[i].transform);
                         break;
                     case "CheckPointDown":
-                        Instantiate(doorVertical, doorways[i].transform.position, Quaternion.identity);
+                        Instantiate(doorVertical, doorways[i].transform);
                         break;
                     default:
                         break;

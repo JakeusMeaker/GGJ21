@@ -676,7 +676,7 @@ MonoBehaviour:
   startRoom: {fileID: 7241988881018827404, guid: 5016bcc8d053db7469d212170197d1a9,
     type: 3}
   endRoom: {fileID: 4428303271398357306, guid: 76f02945d921f974fbde1098c3dd62e6, type: 3}
-  doorHorizontal: {fileID: 1057323984452193760, guid: 20d2267b1eb78f245ad9823d68eef269,
+  doorHorizontal: {fileID: 3460874820068081660, guid: 20d2267b1eb78f245ad9823d68eef269,
     type: 3}
   doorVertical: {fileID: 5687289005493648031, guid: 2c41e06e4f2855f4f9f45a9a51f3a0ec,
     type: 3}
