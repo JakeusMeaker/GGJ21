@@ -222,7 +222,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2300093493481205259}
   - component: {fileID: 8962963651635689342}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2069115160666519623}
   - component: {fileID: 8795398637873362620}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -352,7 +352,7 @@ MonoBehaviour:
   - {x: 0.5016743, y: -2.2480717, z: 0}
   m_ShapePathHash: 2147413677
   m_Mesh: {fileID: 0}
-  m_InstanceId: 50310
+  m_InstanceId: 27360
 --- !u!1 &3719291558420211590
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,7 +363,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7591888060174160307}
   - component: {fileID: 5964940747237007949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -411,7 +411,7 @@ MonoBehaviour:
   - {x: 0.5007839, y: -2.2501984, z: 0}
   m_ShapePathHash: 1193521101
   m_Mesh: {fileID: 0}
-  m_InstanceId: 50296
+  m_InstanceId: 27344
 --- !u!1 &6207927146798936052
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,7 +422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6836152824515611046}
   - component: {fileID: 5370520507004121564}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -470,7 +470,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -1687021559
   m_Mesh: {fileID: 0}
-  m_InstanceId: 50288
+  m_InstanceId: 27336
 --- !u!1 &6597773849129443763
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +481,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1745721299723266378}
   - component: {fileID: 1562935830851494114}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 1270583991
   m_Mesh: {fileID: 0}
-  m_InstanceId: 50270
+  m_InstanceId: 27314
 --- !u!1 &7137531074049912428
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,7 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1362686817439232646}
   - component: {fileID: 4775356624873181798}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -158284
+      value: -79380
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -693,6 +693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_H
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831071210692582314, guid: bf2872e6a6e2873429c1007c7b22c232,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2872e6a6e2873429c1007c7b22c232, type: 3}
@@ -717,7 +722,7 @@ PrefabInstance:
     - target: {fileID: 172573344074149757, guid: 90da27e82bae26e4fb6adcddfcb5b414,
         type: 3}
       propertyPath: m_InstanceId
-      value: -158292
+      value: -79384
       objectReference: {fileID: 0}
     - target: {fileID: 3158270660369207614, guid: 90da27e82bae26e4fb6adcddfcb5b414,
         type: 3}
@@ -778,6 +783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PlantPot
+      objectReference: {fileID: 0}
+    - target: {fileID: 7427240340330864236, guid: 90da27e82bae26e4fb6adcddfcb5b414,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 90da27e82bae26e4fb6adcddfcb5b414, type: 3}

@@ -172,12 +172,18 @@ public class LevelGeneration : MonoBehaviour
                 SpawnGraphGrid();
             }
         }
-
     }
 
     void SetPlayerMonsterPositions()
     {
         monsterGO.transform.position = previousRooms.Peek().transform.position;
+
+        for (int i = previousRooms.Count; i > 3; i--)
+        {
+            EnemyAI enemy = monsterGO.GetComponent<EnemyAI>();
+            enemy.patrolRooms.Add(previousRooms.Peek());
+            previousRooms.Pop();
+        }
 
         for (int i = previousRooms.Count; i > 1; i--)
         {

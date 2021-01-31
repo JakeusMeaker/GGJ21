@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1718610340033895341}
   - component: {fileID: 2476422166929083641}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6265430223741296466}
   - component: {fileID: 6361323421652865062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -174,7 +174,7 @@ GameObject:
   m_Component:
   - component: {fileID: 953884787578249759}
   - component: {fileID: 4097877814319656277}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5407263620212233216}
   - component: {fileID: 4007062356043367530}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -304,7 +304,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -1687021559
   m_Mesh: {fileID: 0}
-  m_InstanceId: 45512
+  m_InstanceId: 26672
 --- !u!1 &2069977209113364848
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6478520675620216382}
   - component: {fileID: 5564338940992189808}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,7 +363,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 1270583991
   m_Mesh: {fileID: 0}
-  m_InstanceId: 45532
+  m_InstanceId: 26698
 --- !u!1 &5004611703564922594
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2909567546796621860}
   - component: {fileID: 2575846135643187621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -422,7 +422,7 @@ MonoBehaviour:
   - {x: 0.5007839, y: -2.2501984, z: 0}
   m_ShapePathHash: 1193521101
   m_Mesh: {fileID: 0}
-  m_InstanceId: 45496
+  m_InstanceId: 26654
 --- !u!1 &5417897619261228146
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +433,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4380457475002404598}
   - component: {fileID: 3290599063077567546}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_10
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -515,7 +515,7 @@ GameObject:
   m_Component:
   - component: {fileID: 83205354798902310}
   - component: {fileID: 5695162268606317097}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -932,7 +932,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059606139929275595}
   - component: {fileID: 6390921185438005538}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -980,7 +980,7 @@ MonoBehaviour:
   - {x: 0.5016743, y: -2.2480717, z: 0}
   m_ShapePathHash: 2147413677
   m_Mesh: {fileID: 0}
-  m_InstanceId: 45544
+  m_InstanceId: 26716
 --- !u!1001 &351297704350616342
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -996,12 +996,17 @@ PrefabInstance:
     - target: {fileID: 1979376232157220930, guid: 78601a64ace1f6c4fbb4f9cd7a1963fd,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139128
+      value: -76804
       objectReference: {fileID: 0}
     - target: {fileID: 3853293150552324275, guid: 78601a64ace1f6c4fbb4f9cd7a1963fd,
         type: 3}
       propertyPath: m_Name
       value: Screen_H (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853293150552324275, guid: 78601a64ace1f6c4fbb4f9cd7a1963fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5774893409764281429, guid: 78601a64ace1f6c4fbb4f9cd7a1963fd,
         type: 3}
@@ -1081,7 +1086,7 @@ PrefabInstance:
     - target: {fileID: 2764637553707083241, guid: 031f53a61d344a94ebe7f8718c9007db,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139136
+      value: -76810
       objectReference: {fileID: 0}
     - target: {fileID: 6146408182392794208, guid: 031f53a61d344a94ebe7f8718c9007db,
         type: 3}
@@ -1143,6 +1148,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table_V (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8262162334722397986, guid: 031f53a61d344a94ebe7f8718c9007db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 031f53a61d344a94ebe7f8718c9007db, type: 3}
 --- !u!4 &8145794105522038795 stripped
@@ -1166,12 +1176,17 @@ PrefabInstance:
     - target: {fileID: 1979376232157220930, guid: 78601a64ace1f6c4fbb4f9cd7a1963fd,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139144
+      value: -76820
       objectReference: {fileID: 0}
     - target: {fileID: 3853293150552324275, guid: 78601a64ace1f6c4fbb4f9cd7a1963fd,
         type: 3}
       propertyPath: m_Name
       value: Screen_H
+      objectReference: {fileID: 0}
+    - target: {fileID: 3853293150552324275, guid: 78601a64ace1f6c4fbb4f9cd7a1963fd,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5774893409764281429, guid: 78601a64ace1f6c4fbb4f9cd7a1963fd,
         type: 3}
@@ -1248,6 +1263,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair_V
       objectReference: {fileID: 0}
+    - target: {fileID: 1389041296618996245, guid: 09be06c1d074f0d4d9b6596043e4efb9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7181546632316593255, guid: 09be06c1d074f0d4d9b6596043e4efb9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1311,7 +1331,7 @@ PrefabInstance:
     - target: {fileID: 7858370075131877672, guid: 09be06c1d074f0d4d9b6596043e4efb9,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139154
+      value: -76826
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09be06c1d074f0d4d9b6596043e4efb9, type: 3}
@@ -1332,6 +1352,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Table_H
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198255343122328346, guid: f0164d2180593d3459e9ab79a998efc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7989347907775824308, guid: f0164d2180593d3459e9ab79a998efc9,
         type: 3}
@@ -1396,7 +1421,7 @@ PrefabInstance:
     - target: {fileID: 8164302446217929589, guid: f0164d2180593d3459e9ab79a998efc9,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139162
+      value: -76834
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0164d2180593d3459e9ab79a998efc9, type: 3}
@@ -1476,7 +1501,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139168
+      value: -76846
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -1487,6 +1512,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_H (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831071210692582314, guid: bf2872e6a6e2873429c1007c7b22c232,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2872e6a6e2873429c1007c7b22c232, type: 3}
@@ -1566,7 +1596,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139176
+      value: -76854
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -1577,6 +1607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_H (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831071210692582314, guid: bf2872e6a6e2873429c1007c7b22c232,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2872e6a6e2873429c1007c7b22c232, type: 3}
@@ -1597,6 +1632,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Table_H (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1198255343122328346, guid: f0164d2180593d3459e9ab79a998efc9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7989347907775824308, guid: f0164d2180593d3459e9ab79a998efc9,
         type: 3}
@@ -1661,7 +1701,7 @@ PrefabInstance:
     - target: {fileID: 8164302446217929589, guid: f0164d2180593d3459e9ab79a998efc9,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139186
+      value: -76858
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0164d2180593d3459e9ab79a998efc9, type: 3}
@@ -1682,6 +1722,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_V (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389041296618996245, guid: 09be06c1d074f0d4d9b6596043e4efb9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7181546632316593255, guid: 09be06c1d074f0d4d9b6596043e4efb9,
         type: 3}
@@ -1746,7 +1791,7 @@ PrefabInstance:
     - target: {fileID: 7858370075131877672, guid: 09be06c1d074f0d4d9b6596043e4efb9,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139194
+      value: -76866
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09be06c1d074f0d4d9b6596043e4efb9, type: 3}
@@ -1771,7 +1816,7 @@ PrefabInstance:
     - target: {fileID: 2764637553707083241, guid: 031f53a61d344a94ebe7f8718c9007db,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139200
+      value: -76874
       objectReference: {fileID: 0}
     - target: {fileID: 6146408182392794208, guid: 031f53a61d344a94ebe7f8718c9007db,
         type: 3}
@@ -1833,6 +1878,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Table_V
       objectReference: {fileID: 0}
+    - target: {fileID: 8262162334722397986, guid: 031f53a61d344a94ebe7f8718c9007db,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 031f53a61d344a94ebe7f8718c9007db, type: 3}
 --- !u!4 &643083248043430240 stripped
@@ -1852,6 +1902,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_V (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389041296618996245, guid: 09be06c1d074f0d4d9b6596043e4efb9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7181546632316593255, guid: 09be06c1d074f0d4d9b6596043e4efb9,
         type: 3}
@@ -1916,7 +1971,7 @@ PrefabInstance:
     - target: {fileID: 7858370075131877672, guid: 09be06c1d074f0d4d9b6596043e4efb9,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139210
+      value: -76882
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09be06c1d074f0d4d9b6596043e4efb9, type: 3}
@@ -1937,6 +1992,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_V (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1389041296618996245, guid: 09be06c1d074f0d4d9b6596043e4efb9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7181546632316593255, guid: 09be06c1d074f0d4d9b6596043e4efb9,
         type: 3}
@@ -2001,7 +2061,7 @@ PrefabInstance:
     - target: {fileID: 7858370075131877672, guid: 09be06c1d074f0d4d9b6596043e4efb9,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139218
+      value: -76890
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 09be06c1d074f0d4d9b6596043e4efb9, type: 3}
@@ -2081,7 +2141,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139224
+      value: -76902
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -2092,6 +2152,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_H
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831071210692582314, guid: bf2872e6a6e2873429c1007c7b22c232,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2872e6a6e2873429c1007c7b22c232, type: 3}
@@ -2171,7 +2236,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -139232
+      value: -76910
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -2182,6 +2247,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_H (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831071210692582314, guid: bf2872e6a6e2873429c1007c7b22c232,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2872e6a6e2873429c1007c7b22c232, type: 3}
