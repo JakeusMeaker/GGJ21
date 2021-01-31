@@ -13,10 +13,30 @@ public class NoteReader : MonoBehaviour
 
     bool reading = false;
 
+    bool near = false;
+
     private void Start()
     {
         noteText = GameObject.FindGameObjectWithTag("Notes").GetComponent<Text>();
         UIText = GameObject.FindGameObjectWithTag("PlayerUI").GetComponent<Text>();
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Jump") && !reading && near)
+        {
+            Debug.Log("spacepressed");
+            reading = true;
+            notePanel.SetActive(true);
+            noteText = GameObject.FindGameObjectWithTag("Notes").GetComponent<Text>();
+            noteText.text = so.noteText;
+        }
+        else if (Input.GetButtonUp("Jump") && reading)
+        {
+            reading = false;
+            noteText.text = "";
+            notePanel.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,21 +44,11 @@ public class NoteReader : MonoBehaviour
         if(collision.name == "Player")
         {
             UIText.text = "Read note?";
-            if (Input.GetButton("Jump") && !reading)
-            {
-                Debug.Log("spacepressed");
-                reading = true;
-                notePanel.SetActive(true);
-                Time.timeScale = 0;
-                noteText.text = so.noteText;
-            }
-            else if (Input.GetButtonUp("Jump") && reading)
-            {
-                reading = false;
-                notePanel.SetActive(false);
-                Time.timeScale = 1;
-                noteText.text = "";
-            }
+            near = true;
+        }
+        else
+        {
+            near = false;
         }
     }
 }
