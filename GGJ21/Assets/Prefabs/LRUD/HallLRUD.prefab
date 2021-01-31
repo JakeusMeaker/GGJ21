@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1620273038434893527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4806186580804515094}
+  m_Layer: 0
+  m_Name: DoorCheckPoints
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4806186580804515094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620273038434893527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1109243725154284853}
+  - {fileID: 823609479641292656}
+  - {fileID: 7894751833486318184}
+  - {fileID: 7482081972407252193}
+  m_Father: {fileID: 4414733679462208950}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3005554107799707126
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7482081972407252193}
+  m_Layer: 0
+  m_Name: CheckPointDown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7482081972407252193
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3005554107799707126}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.5, z: -0.40807685}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4806186580804515094}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4002727729464260527
 GameObject:
   m_ObjectHideFlags: 0
@@ -58,7 +122,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -1687021559
   m_Mesh: {fileID: 0}
-  m_InstanceId: 27168
+  m_InstanceId: 32106
 --- !u!1 &4195797030466894312
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +181,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 1270583991
   m_Mesh: {fileID: 0}
-  m_InstanceId: 27198
+  m_InstanceId: 32146
 --- !u!1 &4735382379526483185
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +240,37 @@ MonoBehaviour:
   - {x: 0.5016743, y: -2.2480717, z: 0}
   m_ShapePathHash: 2147413677
   m_Mesh: {fileID: 0}
-  m_InstanceId: 27166
+  m_InstanceId: 32102
+--- !u!1 &5917116153669969403
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 823609479641292656}
+  m_Layer: 0
+  m_Name: CheckPointRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &823609479641292656
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917116153669969403}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 2.5, y: 0, z: -0.40807685}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4806186580804515094}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5924455106464989149
 GameObject:
   m_ObjectHideFlags: 0
@@ -235,7 +329,37 @@ MonoBehaviour:
   - {x: 0.5007839, y: -2.2501984, z: 0}
   m_ShapePathHash: 1193521101
   m_Mesh: {fileID: 0}
-  m_InstanceId: 27174
+  m_InstanceId: 32112
+--- !u!1 &6160657275708287512
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1109243725154284853}
+  m_Layer: 0
+  m_Name: CheckPointLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1109243725154284853
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6160657275708287512}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.5, y: 0, z: -0.40807685}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4806186580804515094}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7363665222696534509
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,6 +397,7 @@ Transform:
   - {fileID: 8759636743301394705}
   - {fileID: 9015236918308364316}
   - {fileID: 644501312252348904}
+  - {fileID: 4806186580804515094}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -340,6 +465,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 3
+  doorways:
+  - {fileID: 6160657275708287512}
+  - {fileID: 5917116153669969403}
+  - {fileID: 9189249031027126776}
+  - {fileID: 3005554107799707126}
 --- !u!61 &3433043145835311156
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -444,3 +574,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.0055547, y: 1.9998074}
   m_EdgeRadius: 0
+--- !u!1 &9189249031027126776
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7894751833486318184}
+  m_Layer: 0
+  m_Name: CheckPointUp
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7894751833486318184
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9189249031027126776}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.5, z: -0.40807685}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4806186580804515094}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

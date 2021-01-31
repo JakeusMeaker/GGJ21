@@ -13,6 +13,9 @@ public class LevelGeneration : MonoBehaviour
     public GameObject startRoom;
     public GameObject endRoom;
 
+    public GameObject doorHorizontal;
+    public GameObject doorVertical;
+
     public GameObject playerGO;
     public GameObject monsterGO;
 
@@ -54,6 +57,7 @@ public class LevelGeneration : MonoBehaviour
 
                 int randRoom = Random.Range(0, LRrooms.Length);
                 GameObject newRoom = Instantiate(LRrooms[randRoom], transform.position, Quaternion.identity);
+                CheckDoors(newRoom.GetComponent<RoomType>().doorways);
                 previousRooms.Push(newRoom);
 
                 direction = Random.Range(1, 6);
@@ -89,6 +93,7 @@ public class LevelGeneration : MonoBehaviour
 
                 int randRoom = Random.Range(0, LRrooms.Length);
                 GameObject newRoom = Instantiate(LRrooms[randRoom], transform.position, Quaternion.identity);
+                CheckDoors(newRoom.GetComponent<RoomType>().doorways);
                 previousRooms.Push(newRoom);
 
                 direction = Random.Range(3, 6);
@@ -120,6 +125,7 @@ public class LevelGeneration : MonoBehaviour
                         previousRooms.Peek().GetComponent<RoomType>().RoomDestruction();
                         int randBottomRoom = Random.Range(0, LRUDrooms.Length);
                         GameObject newRoomGO = Instantiate(LRUDrooms[randBottomRoom], transform.position, Quaternion.identity);
+                        CheckDoors(newRoomGO.GetComponent<RoomType>().doorways);
                         previousRooms.Push(newRoomGO);
                     }
                 }
@@ -129,6 +135,7 @@ public class LevelGeneration : MonoBehaviour
 
                 int randTopRoom = Random.Range(0, LRUrooms.Length);
                 GameObject newRoom = Instantiate(LRUrooms[randTopRoom], transform.position, Quaternion.identity);
+                CheckDoors(newRoom.GetComponent<RoomType>().doorways);
                 previousRooms.Push(newRoom);
 
 
@@ -166,10 +173,43 @@ public class LevelGeneration : MonoBehaviour
                 Destroy(previousRooms.Peek());
                 previousRooms.Pop();
                 GameObject newRoom = Instantiate(endRoom, transform.position, Quaternion.identity);
+                CheckDoors(newRoom.GetComponent<RoomType>().doorways);
                 previousRooms.Push(newRoom);
 
                 SetPlayerMonsterPositions();
                 SpawnGraphGrid();
+            }
+        }
+    }
+
+    void CheckDoors(GameObject[] doorways)
+    {
+        for (int i = 0; i < doorways.Length; i++)
+        {
+            Collider2D collider = Physics2D.OverlapCircle(doorways[i].transform.position, 0.5f, room);
+            if (collider != null)
+            {
+                return;
+            }
+            else
+            {
+                switch (doorways[i].name)
+                {
+                    case "CheckPointLeft":
+                        Instantiate(doorHorizontal, doorways[i].transform.position, Quaternion.identity);
+                        break;
+                    case "CheckPointRight":
+                        Instantiate(doorHorizontal, doorways[i].transform.position, Quaternion.identity);
+                        break;
+                    case "CheckPointUp":
+                        Instantiate(doorVertical, doorways[i].transform.position, Quaternion.identity);
+                        break;
+                    case "CheckPointDown":
+                        Instantiate(doorVertical, doorways[i].transform.position, Quaternion.identity);
+                        break;
+                    default:
+                        break;
+                }
             }
         }
     }
