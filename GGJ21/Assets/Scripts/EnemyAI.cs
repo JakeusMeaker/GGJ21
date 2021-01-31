@@ -35,6 +35,8 @@ public class EnemyAI : MonoBehaviour
 
     private int currentTargetPoint = 0;
 
+    private bool isChasing = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +45,8 @@ public class EnemyAI : MonoBehaviour
         anim = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         sr.sprite = defaultSprite;
+
+        StartCoroutine(MonsterSounds());
     }
 
     // Update is called once per frame
@@ -50,32 +54,16 @@ public class EnemyAI : MonoBehaviour
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-
-        int soundChance = Random.Range(0, 100);
-        if (soundChance <= 30 && !audioSource.isPlaying)
-        {
-            if (distanceToPlayer > 20)
-            {
-                audioSource.pitch = Random.Range(0.5f, 1.5f);
-                audioSource.PlayOneShot(distantSounds[Random.Range(0, distantSounds.Length)]);
-            }
-            else if (distanceToPlayer > 10 && distanceToPlayer < 20)
-            {
-                audioSource.pitch = Random.Range(0.5f, 1.5f);
-                audioSource.PlayOneShot(closerSounds[Random.Range(0, closerSounds.Length)]);
-            }
-        }
-
-
         if (distanceToPlayer < 10)
         {
+            isChasing = true;
             targetPosition = player.transform;
-            int chaseSoundChance = Random.Range(0, 100);
-            if (chaseSoundChance <= 90 && !audioSource.isPlaying)
-            {
-                audioSource.pitch = Random.Range(0.5f, 1.5f);
-                audioSource.PlayOneShot(chaseSounds[Random.Range(0, chaseSounds.Length)]);
-            }
+
+        }
+        else
+        {
+            isChasing = false;
+            PatrolPath();
         }
 
         if (path == null)
@@ -162,6 +150,42 @@ public class EnemyAI : MonoBehaviour
         }
 
         rb.velocity = new Vector2(horizontal * runSpeed, vertical * runSpeed);
+    }
+
+    IEnumerator MonsterSounds()
+    {
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        int soundChance = Random.Range(0, 100);
+        if (!isChasing)
+        {
+            if (soundChance <= 30 && !audioSource.isPlaying)
+            {
+
+                if (distanceToPlayer > 20)
+                {
+                    audioSource.pitch = Random.Range(0.5f, 1.5f);
+                    audioSource.PlayOneShot(distantSounds[Random.Range(0, distantSounds.Length)]);
+                }
+                else if (distanceToPlayer > 10 && distanceToPlayer < 20)
+                {
+                    audioSource.pitch = Random.Range(0.5f, 1.5f);
+                    audioSource.PlayOneShot(closerSounds[Random.Range(0, closerSounds.Length)]);
+                }
+            }
+            else
+            {
+                yield return new WaitForSeconds(Random.Range(2.0f, 10f));
+            }
+        }
+        else
+        {
+            if (soundChance <= 90 && !audioSource.isPlaying)
+            {
+                audioSource.pitch = Random.Range(0.5f, 1.5f);
+                audioSource.PlayOneShot(chaseSounds[Random.Range(0, chaseSounds.Length)]);
+            }
+        }
     }
 
     public void StartPathfinding()
