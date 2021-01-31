@@ -36,6 +36,7 @@ public class EnemyAI : MonoBehaviour
     private int currentTargetPoint = 0;
 
     private bool isChasing = false;
+    private bool playingSound = false;
 
     // Start is called before the first frame update
     void Start()
@@ -58,7 +59,6 @@ public class EnemyAI : MonoBehaviour
         {
             isChasing = true;
             targetPosition = player.transform;
-
         }
         else
         {
@@ -154,36 +154,56 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator MonsterSounds()
     {
+        Debug.Log("Monster Sounds playing");
         float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
 
         int soundChance = Random.Range(0, 100);
+        Debug.Log(soundChance);
+
         if (!isChasing)
         {
-            if (soundChance <= 30 && !audioSource.isPlaying)
+            if (soundChance <= 50 && !audioSource.isPlaying)
             {
-
                 if (distanceToPlayer > 20)
                 {
+                    Debug.Log("Playing distant sound");
+                    audioSource.volume = 0.3f;
                     audioSource.pitch = Random.Range(0.5f, 1.5f);
                     audioSource.PlayOneShot(distantSounds[Random.Range(0, distantSounds.Length)]);
+                    yield return null;
+                    StartCoroutine(MonsterSounds());
                 }
                 else if (distanceToPlayer > 10 && distanceToPlayer < 20)
                 {
+                    Debug.Log("Playing closer sound");
+                    audioSource.volume = 0.6f;
                     audioSource.pitch = Random.Range(0.5f, 1.5f);
                     audioSource.PlayOneShot(closerSounds[Random.Range(0, closerSounds.Length)]);
+                    yield return null;
+                    StartCoroutine(MonsterSounds());
                 }
             }
             else
             {
                 yield return new WaitForSeconds(Random.Range(2.0f, 10f));
+                StartCoroutine(MonsterSounds());
             }
         }
         else
         {
             if (soundChance <= 90 && !audioSource.isPlaying)
             {
+                Debug.Log("Playing chase sound");
+                audioSource.volume = 1.0f;
                 audioSource.pitch = Random.Range(0.5f, 1.5f);
                 audioSource.PlayOneShot(chaseSounds[Random.Range(0, chaseSounds.Length)]);
+                yield return null;
+                StartCoroutine(MonsterSounds());
+            }
+            else
+            {
+                yield return new WaitForSeconds(Random.Range(.5f, 2f));
+                StartCoroutine(MonsterSounds());
             }
         }
     }
