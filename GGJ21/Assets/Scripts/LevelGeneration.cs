@@ -34,16 +34,15 @@ public class LevelGeneration : MonoBehaviour
 
     [SerializeField]
     private Stack<GameObject> previousRooms = new Stack<GameObject>();
-
+    [SerializeField] private List<GameObject> doorChecker = new List<GameObject>();
     // Start is called before the first frame update
     void Start()
     {
         int randStartPos = Random.Range(0, startPositions.Length);
         transform.position = startPositions[randStartPos].position;
         GameObject newRoom = Instantiate(startRoom, transform.position, Quaternion.identity);
-        GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
-        CheckDoors(doorways);
         previousRooms.Push(newRoom);
+        doorChecker.Add(newRoom);
 
         direction = Random.Range(1, 6);
         Move();
@@ -60,9 +59,8 @@ public class LevelGeneration : MonoBehaviour
 
                 int randRoom = Random.Range(0, LRrooms.Length);
                 GameObject newRoom = Instantiate(LRrooms[randRoom], transform.position, Quaternion.identity);
-                GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
-                CheckDoors(doorways);
                 previousRooms.Push(newRoom);
+                doorChecker.Add(newRoom);
 
                 direction = Random.Range(1, 6);
                 if (direction == 3)
@@ -97,9 +95,8 @@ public class LevelGeneration : MonoBehaviour
 
                 int randRoom = Random.Range(0, LRrooms.Length);
                 GameObject newRoom = Instantiate(LRrooms[randRoom], transform.position, Quaternion.identity);
-                GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
-                CheckDoors(doorways);
                 previousRooms.Push(newRoom);
+                doorChecker.Add(newRoom);
 
                 direction = Random.Range(3, 6);
                 if (transform.position.x > minX)
@@ -130,9 +127,8 @@ public class LevelGeneration : MonoBehaviour
                         previousRooms.Peek().GetComponent<RoomType>().RoomDestruction();
                         int randBottomRoom = Random.Range(0, LRUDrooms.Length);
                         GameObject newRoomGO = Instantiate(LRUDrooms[randBottomRoom], transform.position, Quaternion.identity);
-                        GameObject[] doorwaysGO = newRoomGO.GetComponent<RoomType>().doorways;
-                        CheckDoors(doorwaysGO);
                         previousRooms.Push(newRoomGO);
+                        doorChecker.Add(newRoomGO);
                     }
                 }
 
@@ -141,10 +137,8 @@ public class LevelGeneration : MonoBehaviour
 
                 int randTopRoom = Random.Range(0, LRUrooms.Length);
                 GameObject newRoom = Instantiate(LRUrooms[randTopRoom], transform.position, Quaternion.identity);
-                GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
-                CheckDoors(doorways);
                 previousRooms.Push(newRoom);
-
+                doorChecker.Add(newRoom);
 
                 direction = Random.Range(1, 6);
                 if (transform.position.x < maxX)
@@ -177,12 +171,21 @@ public class LevelGeneration : MonoBehaviour
             {
                 Debug.Log("Adding Exit room");
                 transform.position = previousRooms.Peek().transform.position;
+                doorChecker.Remove(doorChecker[doorChecker.Count - 1]);
                 Destroy(previousRooms.Peek());
                 previousRooms.Pop();
                 GameObject newRoom = Instantiate(endRoom, transform.position, Quaternion.identity);
-                GameObject[] doorways = newRoom.GetComponent<RoomType>().doorways;
-                CheckDoors(doorways);
                 previousRooms.Push(newRoom);
+                doorChecker.Add(newRoom);
+
+                for (int i = 0; i < doorChecker.Count - 1; i++)
+                {
+                    if (doorChecker[i] != null)
+                    {
+                        GameObject[] doorways = doorChecker[i].GetComponent<RoomType>().doorways;
+                        CheckDoors(doorways);
+                    }
+                }
 
                 SetPlayerMonsterPositions();
                 SpawnGraphGrid();
@@ -195,11 +198,7 @@ public class LevelGeneration : MonoBehaviour
         for (int i = 0; i < doorways.Length; i++)
         {
             Debug.Log("Checking for door");
-            if (Physics2D.OverlapCircle(doorways[i].transform.position, 5f, room))
-            {
-                return;
-            }
-            else
+            if (!Physics2D.OverlapCircle(doorways[i].transform.position, .5f, room))
             {
                 switch (doorways[i].name)
                 {
@@ -219,6 +218,7 @@ public class LevelGeneration : MonoBehaviour
                         break;
                 }
             }
+            else return;
         }
     }
 
@@ -228,13 +228,17 @@ public class LevelGeneration : MonoBehaviour
 
         for (int i = previousRooms.Count; i > 3; i--)
         {
-            EnemyAI enemy = monsterGO.GetComponent<EnemyAI>();
-            enemy.patrolRooms.Add(previousRooms.Peek());
-            previousRooms.Pop();
+            if (previousRooms != null)
+            {
+                EnemyAI enemy = monsterGO.GetComponent<EnemyAI>();
+                enemy.patrolRooms.Add(previousRooms.Peek());
+                previousRooms.Pop();
+            }
         }
 
         for (int i = previousRooms.Count; i > 1; i--)
         {
+            doorChecker.Add(previousRooms.Peek());
             previousRooms.Pop();
         }
 
