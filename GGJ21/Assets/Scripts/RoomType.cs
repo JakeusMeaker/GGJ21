@@ -8,6 +8,8 @@ public class RoomType : MonoBehaviour
 
     public GameObject[] doorways;
 
+    public Transform keySpawnLocation;
+
     public void RoomDestruction()
     {
         Destroy(gameObject);

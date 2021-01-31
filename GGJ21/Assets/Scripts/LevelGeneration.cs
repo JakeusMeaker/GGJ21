@@ -12,9 +12,13 @@ public class LevelGeneration : MonoBehaviour
     public GameObject[] LRUDrooms;
     public GameObject startRoom;
     public GameObject endRoom;
+    public GameObject key;
 
     public GameObject doorHorizontal;
     public GameObject doorVertical;
+
+    public GameObject exitDoorHorizontal;
+    public GameObject exitDoorVertical;
 
     public GameObject playerGO;
     public GameObject monsterGO;
@@ -28,6 +32,7 @@ public class LevelGeneration : MonoBehaviour
     public float gizmoRadius = 10;
 
     public LayerMask room;
+    public LayerMask linecastColliders;
 
     private int direction;
     private const float moveAmount = 10;
@@ -178,12 +183,21 @@ public class LevelGeneration : MonoBehaviour
                 previousRooms.Push(newRoom);
                 doorChecker.Add(newRoom);
 
+                CheckDoors(newRoom.GetComponent<RoomType>().doorways, true);
+
+                int rndNo = Random.Range(0, doorChecker.Count);
+                if (doorChecker[rndNo] != null)
+                {
+                    RoomType keySpwnRoom = doorChecker[rndNo].GetComponent<RoomType>();
+                    Instantiate(key, keySpwnRoom.keySpawnLocation);
+                }
+
                 for (int i = 0; i < doorChecker.Count - 1; i++)
                 {
                     if (doorChecker[i] != null)
                     {
                         GameObject[] doorways = doorChecker[i].GetComponent<RoomType>().doorways;
-                        CheckDoors(doorways);
+                        CheckDoors(doorways, false);
                     }
                 }
 
@@ -193,32 +207,102 @@ public class LevelGeneration : MonoBehaviour
         }
     }
 
-    void CheckDoors(GameObject[] doorways)
+    void CheckDoors(GameObject[] doorways, bool lastRoom)
     {
         for (int i = 0; i < doorways.Length; i++)
         {
             Debug.Log("Checking for door");
-            if (!Physics2D.OverlapCircle(doorways[i].transform.position, .5f, room))
+            //if (!Physics2D.OverlapCircle(doorways[i].transform.position, 50f, room))
+            //{
+            //    switch (doorways[i].name)
+            //    {
+            //        case "CheckPointLeft":
+            //            Instantiate(doorHorizontal, doorways[i].transform);
+            //            break;
+            //        case "CheckPointRight":
+            //            Instantiate(doorHorizontal, doorways[i].transform);
+            //            break;
+            //        case "CheckPointUp":
+            //            Instantiate(doorVertical, doorways[i].transform);
+            //            break;
+            //        case "CheckPointDown":
+            //            Instantiate(doorVertical, doorways[i].transform);
+            //            break;
+            //        default:
+            //            break;
+            //    }
+            //}
+            //else return;
+            switch (doorways[i].name)
             {
-                switch (doorways[i].name)
-                {
-                    case "CheckPointLeft":
-                        Instantiate(doorHorizontal, doorways[i].transform);
-                        break;
-                    case "CheckPointRight":
-                        Instantiate(doorHorizontal, doorways[i].transform);
-                        break;
-                    case "CheckPointUp":
-                        Instantiate(doorVertical, doorways[i].transform);
-                        break;
-                    case "CheckPointDown":
-                        Instantiate(doorVertical, doorways[i].transform);
-                        break;
-                    default:
-                        break;
-                }
+                case "CheckPointLeft":
+                    Vector2 startL = doorways[i].transform.position;
+                    Vector2 endL = startL + new Vector2(-5, 0);
+                    RaycastHit2D resultL = Physics2D.Linecast(startL, endL, linecastColliders);
+                    if (resultL.collider == null)
+                    {
+                        if (!lastRoom)
+                        {
+                            Instantiate(doorHorizontal, doorways[i].transform);
+                        }
+                        else
+                        {
+                            Instantiate(exitDoorHorizontal, doorways[i].transform);
+                        }
+                    }
+                    break;
+                case "CheckPointRight":
+                    Vector2 startR = doorways[i].transform.position;
+                    Vector2 endR = startR + new Vector2(5, 0);
+                    RaycastHit2D resultR = Physics2D.Linecast(startR, endR);
+                    if (resultR.collider == null)
+                    {
+                        if (!lastRoom)
+                        {
+                            Instantiate(doorHorizontal, doorways[i].transform);
+                        }
+                        else
+                        {
+                            Instantiate(exitDoorHorizontal, doorways[i].transform);
+                        }
+                    }
+                    break;
+                case "CheckPointUp":
+                    Vector2 startU = doorways[i].transform.position;
+                    Vector2 endU = startU + new Vector2(0, 5);
+                    RaycastHit2D resultU = Physics2D.Linecast(startU, endU);
+                    if (resultU.collider == null)
+                    {
+                        if (!lastRoom)
+                        {
+                            Instantiate(doorVertical, doorways[i].transform);
+                        }
+                        else
+                        {
+                            Instantiate(exitDoorVertical, doorways[i].transform);
+                        }
+                    }
+                    break;
+                case "CheckPointDown":
+                    Vector2 startD = doorways[i].transform.position;
+                    Vector2 endD = startD + new Vector2(0, -5);
+                    RaycastHit2D resultD = Physics2D.Linecast(startD, endD);
+                    if (resultD.collider == null)
+                    {
+                        if (!lastRoom)
+                        {
+                            Instantiate(doorVertical, doorways[i].transform);
+                        }
+                        else
+                        {
+                            Instantiate(exitDoorVertical, doorways[i].transform);
+                        }
+                    }
+                    break;
+                default:
+                    break;
             }
-            else return;
+
         }
     }
 
@@ -277,5 +361,6 @@ public class LevelGeneration : MonoBehaviour
         // Display the explosion radius when selected
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, gizmoRadius);
+        Gizmos.DrawWireSphere(transform.position, .5f);
     }
 }
