@@ -10,6 +10,12 @@ public class EnemyAI : MonoBehaviour
 
     public GameObject player;
 
+    public List<GameObject> patrolRooms;
+
+    public AudioClip[] distantSounds;
+    public AudioClip[] closerSounds;
+    public AudioClip[] chaseSounds;
+
     [SerializeField] Sprite defaultSprite;
 
     private float horizontal;
@@ -19,6 +25,7 @@ public class EnemyAI : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer sr;
     private Animator anim;
+    private AudioSource audioSource;
 
     private Seeker seeker;
     private Path path;
@@ -26,6 +33,7 @@ public class EnemyAI : MonoBehaviour
     private int currentWaypoint = 0;
     public bool reachedEndOfPath;
 
+    private int currentTargetPoint = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -33,18 +41,42 @@ public class EnemyAI : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
-        sr.sprite = defaultSprite;        
+        audioSource = GetComponent<AudioSource>();
+        sr.sprite = defaultSprite;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Vector2.Distance(transform.position, player.transform.position) < 10)
+        float distanceToPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+
+        int soundChance = Random.Range(0, 100);
+        if (soundChance <= 30 && !audioSource.isPlaying)
         {
-            targetPosition = player.transform;
+            if (distanceToPlayer > 20)
+            {
+                audioSource.pitch = Random.Range(0.5f, 1.5f);
+                audioSource.PlayOneShot(distantSounds[Random.Range(0, distantSounds.Length)]);
+            }
+            else if (distanceToPlayer > 10 && distanceToPlayer < 20)
+            {
+                audioSource.pitch = Random.Range(0.5f, 1.5f);
+                audioSource.PlayOneShot(closerSounds[Random.Range(0, closerSounds.Length)]);
+            }
         }
 
 
+        if (distanceToPlayer < 10)
+        {
+            targetPosition = player.transform;
+            int chaseSoundChance = Random.Range(0, 100);
+            if (chaseSoundChance <= 90 && !audioSource.isPlaying)
+            {
+                audioSource.pitch = Random.Range(0.5f, 1.5f);
+                audioSource.PlayOneShot(chaseSounds[Random.Range(0, chaseSounds.Length)]);
+            }
+        }
 
         if (path == null)
         {
@@ -65,6 +97,7 @@ public class EnemyAI : MonoBehaviour
                 }
                 else
                 {
+                    SetPath();
                     reachedEndOfPath = true;
                     break;
                 }
@@ -76,10 +109,13 @@ public class EnemyAI : MonoBehaviour
 
         Vector3 dir = (path.vectorPath[currentWaypoint] - transform.position).normalized;
 
-        Vector2 velocity = dir * runSpeed * speedFactor;
+        //Vector2 velocity = dir * runSpeed * speedFactor;
 
-        horizontal += velocity.x * Time.deltaTime;
-        vertical += velocity.y * Time.deltaTime;
+        //horizontal += velocity.x * Time.deltaTime;
+        //vertical += velocity.y * Time.deltaTime;
+
+        horizontal = dir.x * runSpeed * Time.deltaTime;
+        vertical = dir.y * runSpeed * Time.deltaTime;
 
         if (horizontal > 0.5f)
         {
@@ -131,12 +167,61 @@ public class EnemyAI : MonoBehaviour
     public void StartPathfinding()
     {
         seeker = GetComponent<Seeker>();
+        PatrolPath();
         Pathfind();
+    }
+
+    void PatrolPath()
+    {
+        targetPosition = patrolRooms[currentTargetPoint].transform;
+    }
+
+    void SetPath()
+    {
+        if (currentTargetPoint > 0)
+        {
+            currentTargetPoint--;
+            if (patrolRooms[currentTargetPoint] != null)
+            {
+                targetPosition = patrolRooms[currentTargetPoint].transform;
+            }
+            else
+            {
+                SetPath();
+            }
+        }
+        else
+        {
+            currentTargetPoint = Random.Range(2, patrolRooms.Count);
+            if (patrolRooms[currentTargetPoint] != null)
+            {
+                targetPosition = patrolRooms[currentTargetPoint].transform;
+            }
+            else
+            {
+                SetPath();
+            }
+        }
     }
 
     void Pathfind()
     {
         seeker.StartPath(transform.position, targetPosition.position, OnPathComplete);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.otherCollider.name == "Player")
+        {
+            Debug.Log("I FOUND MY NEW FACE");
+            Attack();
+        }
+    }
+
+    void Attack()
+    {
+        //play sound
+        //do spooky stuff
     }
 
     void OnPathComplete(Path p)

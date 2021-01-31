@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3057927482580423060}
   - component: {fileID: 6582130972934530561}
   - component: {fileID: 6910561088414237739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf_V (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -113,7 +113,7 @@ MonoBehaviour:
   - {x: -1.9346416, y: 0.0010504574, z: 0}
   m_ShapePathHash: 1274965289
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40832
+  m_InstanceId: 25338
 --- !u!61 &6910561088414237739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -150,7 +150,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7090744664306789900}
   - component: {fileID: 7953385287740550371}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +200,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -495429267
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40854
+  m_InstanceId: 25374
 --- !u!1 &555091286611506940
 GameObject:
   m_ObjectHideFlags: 0
@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7365289346791179561}
   - component: {fileID: 7512744075711752268}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -295,7 +295,7 @@ GameObject:
   - component: {fileID: 3134018097051385262}
   - component: {fileID: 1955431571539602790}
   - component: {fileID: 3833245730955079275}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chair_V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ MonoBehaviour:
   - {x: -0.7478733, y: -0.81178856, z: 0}
   m_ShapePathHash: -5403117
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40764
+  m_InstanceId: 25236
 --- !u!61 &3833245730955079275
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -755,7 +755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7993681592397438229}
   - component: {fileID: 8374401911779660077}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -839,7 +839,7 @@ GameObject:
   - component: {fileID: 6831285628231043015}
   - component: {fileID: 3795490232878215096}
   - component: {fileID: 6126193443389322850}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -966,7 +966,7 @@ MonoBehaviour:
   - {x: -1, y: 2, z: 0}
   m_ShapePathHash: 1528852483
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40822
+  m_InstanceId: 25326
 --- !u!1 &2194177121702722493
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,7 +977,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2345049357977817696}
   - component: {fileID: 8012571724481445135}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1061,7 +1061,7 @@ GameObject:
   - component: {fileID: 5157330191477118939}
   - component: {fileID: 338261233268035934}
   - component: {fileID: 8743968480336202558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf_V (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   - {x: -1.9346416, y: 0.0010504574, z: 0}
   m_ShapePathHash: 1274965289
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40736
+  m_InstanceId: 25198
 --- !u!61 &8743968480336202558
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1199,7 +1199,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652675406490247842}
   - component: {fileID: 7907650480597403984}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1281,7 +1281,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6636839144156254140}
   - component: {fileID: 8493027949533464604}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 1270583991
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40856
+  m_InstanceId: 25382
 --- !u!1 &3533336144698417344
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1340,7 @@ GameObject:
   m_Component:
   - component: {fileID: 227744338299147969}
   - component: {fileID: 2983598823988539550}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1422,7 +1422,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7158284385744396575}
   - component: {fileID: 736439991929641640}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1504,7 +1504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2035455253152149519}
   - component: {fileID: 2637256092099916991}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1586,7 +1586,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7316821344347438154}
   - component: {fileID: 591543287790702128}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1668,7 +1668,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3850548247515691060}
   - component: {fileID: 8647488727779411435}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   - {x: 0.5007839, y: -2.2501984, z: 0}
   m_ShapePathHash: 1193521101
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40862
+  m_InstanceId: 25388
 --- !u!1 &4587105921560104380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1727,7 +1727,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4834523255657853001}
   - component: {fileID: 2697616415848378730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1811,7 +1811,7 @@ GameObject:
   - component: {fileID: 2060229262030358089}
   - component: {fileID: 6368808256658550895}
   - component: {fileID: 1385176636310758383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf_V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1912,7 +1912,7 @@ MonoBehaviour:
   - {x: -1.9346416, y: 0.0010504574, z: 0}
   m_ShapePathHash: 1274965289
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40826
+  m_InstanceId: 25330
 --- !u!61 &1385176636310758383
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1951,7 +1951,7 @@ GameObject:
   - component: {fileID: 2899381129333558817}
   - component: {fileID: 296283252386606224}
   - component: {fileID: 1641947585582833311}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Table_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2056,7 +2056,7 @@ MonoBehaviour:
   - {x: -0.43723252, y: -1.0007442, z: 0}
   m_ShapePathHash: -625733281
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40732
+  m_InstanceId: 25194
 --- !u!61 &1641947585582833311
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2095,7 +2095,7 @@ GameObject:
   - component: {fileID: 6971599889492760269}
   - component: {fileID: 4545470825191692327}
   - component: {fileID: 1160413928817253025}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Screen_V
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2208,7 +2208,7 @@ MonoBehaviour:
   - {x: -2.9365036, y: 0.000029437244, z: 0}
   m_ShapePathHash: -1329885309
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40804
+  m_InstanceId: 25300
 --- !u!61 &1160413928817253025
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2247,7 +2247,7 @@ GameObject:
   - component: {fileID: 7812613751254979253}
   - component: {fileID: 3108361641172541079}
   - component: {fileID: 3207911813907055315}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shelf_H (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2374,7 +2374,7 @@ MonoBehaviour:
   - {x: -1, y: 2, z: 0}
   m_ShapePathHash: 1528852483
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40786
+  m_InstanceId: 25270
 --- !u!1 &6435590386552790525
 GameObject:
   m_ObjectHideFlags: 0
@@ -2385,7 +2385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3630936819741864759}
   - component: {fileID: 7569293856971242049}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2469,7 +2469,7 @@ GameObject:
   - component: {fileID: 3866363907168986467}
   - component: {fileID: 9001630979712746508}
   - component: {fileID: 367294683359805612}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chair_H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2612,7 +2612,7 @@ MonoBehaviour:
   - {x: -0.68778944, y: 0.8131943, z: 0}
   m_ShapePathHash: -383829911
   m_Mesh: {fileID: 0}
-  m_InstanceId: 40738
+  m_InstanceId: 25200
 --- !u!1 &7316045667900202740
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,7 +2623,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5621356525668180521}
   - component: {fileID: 5700529756040766261}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2762,6 +2762,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 2883298268034781039, guid: 8d7f589169a442e45a1a45c4f69411b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d7f589169a442e45a1a45c4f69411b2, type: 3}
 --- !u!4 &6699171610048672660 stripped
@@ -2836,6 +2841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Lamp (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2883298268034781039, guid: 8d7f589169a442e45a1a45c4f69411b2,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d7f589169a442e45a1a45c4f69411b2, type: 3}

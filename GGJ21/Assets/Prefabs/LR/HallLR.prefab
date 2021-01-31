@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9036802671800201162}
   - component: {fileID: 419725744456227032}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -495429267
   m_Mesh: {fileID: 0}
-  m_InstanceId: 33830
+  m_InstanceId: 23812
 --- !u!1 &5044592089802015610
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - component: {fileID: 602213314803254846}
   - component: {fileID: 4309054805211028978}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,4 +273,4 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -607933271
   m_Mesh: {fileID: 0}
-  m_InstanceId: 33938
+  m_InstanceId: 23828

@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7068974694305904056}
   - component: {fileID: 5876529398970379892}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -60,7 +60,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -607933271
   m_Mesh: {fileID: 0}
-  m_InstanceId: 31934
+  m_InstanceId: 23440
 --- !u!1 &372541661636427126
 GameObject:
   m_ObjectHideFlags: 0
@@ -71,7 +71,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7258181626626092745}
   - component: {fileID: 4316424201494198838}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_14
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -153,7 +153,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4669678185295948167}
   - component: {fileID: 7932364415239460265}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_8
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -235,7 +235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2280031003553014642}
   - component: {fileID: 3916689280403271687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_11
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 429720183984779432}
   - component: {fileID: 5157831562735932629}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_12
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -559,7 +559,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4392155111705895599}
   - component: {fileID: 2541738892231138336}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Decals_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -641,7 +641,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1668683713648286796}
   - component: {fileID: 8039590051961219934}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Shadows
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -691,7 +691,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -495429267
   m_Mesh: {fileID: 0}
-  m_InstanceId: 31948
+  m_InstanceId: 23458
 --- !u!1001 &484698820739811416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -762,7 +762,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -83094
+      value: -63506
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -773,6 +773,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_H (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831071210692582314, guid: bf2872e6a6e2873429c1007c7b22c232,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2872e6a6e2873429c1007c7b22c232, type: 3}
@@ -852,7 +857,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -83102
+      value: -63514
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -863,6 +868,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_H (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831071210692582314, guid: bf2872e6a6e2873429c1007c7b22c232,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2872e6a6e2873429c1007c7b22c232, type: 3}
@@ -942,7 +952,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -83110
+      value: -63522
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -953,6 +963,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair_H
+      objectReference: {fileID: 0}
+    - target: {fileID: 6831071210692582314, guid: bf2872e6a6e2873429c1007c7b22c232,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf2872e6a6e2873429c1007c7b22c232, type: 3}
