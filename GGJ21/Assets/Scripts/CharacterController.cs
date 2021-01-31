@@ -9,7 +9,8 @@ public class CharacterController : MonoBehaviour
 
     public GameObject flashLight;
 
-    public Vector3[] flashlightPositions; // 0 = down , 1 = left, 2 = top, 3 = right
+    public Vector3[] flashlightRotations; // 0 = down , 1 = left, 2 = top, 3 = right
+    public Vector3[] flashlightPositions;
 
     [SerializeField]private Sprite defaultSprite;
 
@@ -28,6 +29,7 @@ public class CharacterController : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         sr.sprite = defaultSprite;
+        flashLight.transform.localPosition = flashlightPositions[3];
     }
 
     // Update is called once per frame
@@ -38,39 +40,47 @@ public class CharacterController : MonoBehaviour
 
         if(horizontal > 0.5f) // right
         {
+            anim.enabled = true;
             sr.flipX = true;
+            sr.flipY = false;
             anim.SetBool("Sideways", true);
             anim.SetBool("Vertical", false);
-            flashLight.transform.eulerAngles = flashlightPositions[0];
+            flashLight.transform.eulerAngles = flashlightRotations[0];
+            flashLight.transform.localPosition = flashlightPositions[0];
         }
         else if(horizontal < -0.5f) //left
         {
+            anim.enabled = true;
             sr.flipX = false;
+            sr.flipY = false;
             anim.SetBool("Sideways", true);
             anim.SetBool("Vertical", false);
-            flashLight.transform.eulerAngles = flashlightPositions[1];
+            flashLight.transform.eulerAngles = flashlightRotations[1];
+            flashLight.transform.localPosition = flashlightPositions[1];
         }
         else if(vertical > 0.5f) //up
         {
+            anim.enabled = true;
+            sr.flipX = false;
             sr.flipY = true;
             anim.SetBool("Vertical", true);
             anim.SetBool("Sideways", false);
-            flashLight.transform.eulerAngles = flashlightPositions[2];
+            flashLight.transform.eulerAngles = flashlightRotations[2];
+            flashLight.transform.localPosition = flashlightPositions[2];
         }
         else if (vertical < -0.5f) //down
         {
+            anim.enabled = true;
+            sr.flipX = false;
             sr.flipY = false;
             anim.SetBool("Vertical", true);
             anim.SetBool("Sideways", false);
-            flashLight.transform.eulerAngles = flashlightPositions[3];
+            flashLight.transform.eulerAngles = flashlightRotations[3];
+            flashLight.transform.localPosition = flashlightPositions[3];
         }
         else
         {
-            sr.flipX = false;
-            sr.flipY = false;
-            anim.SetBool("Sideways", false);
-            anim.SetBool("Vertical", false);
-            sr.sprite = defaultSprite;
+            anim.enabled = false;
         }
 
     }

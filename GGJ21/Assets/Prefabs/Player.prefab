@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274859114260014726}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.123, y: -0.204, z: 0}
+  m_LocalPosition: {x: 0.1175, y: -0.225, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4674996494713867821}
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -263,8 +263,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
-  m_Sprite: {fileID: 685964662446525828, guid: 6e79c88961804e24cbbe839bc712bb4a, type: 3}
+  m_SortingOrder: 20
+  m_Sprite: {fileID: -7922386342955443065, guid: 6e79c88961804e24cbbe839bc712bb4a,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -328,6 +329,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   runSpeed: 2
+  sprintSpeed: 5
+  flashLight: {fileID: 0}
+  flashlightRotations:
+  - {x: 0, y: 0, z: 270}
+  - {x: 0, y: 0, z: 90}
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 180}
+  flashlightPositions:
+  - {x: 0.225, y: -0.115, z: 0}
+  - {x: -0.225, y: -0.115, z: 0}
+  - {x: 0.115, y: 0.225, z: 0}
+  - {x: 0.115, y: -0.225, z: 0}
   defaultSprite: {fileID: 685964662446525828, guid: 6e79c88961804e24cbbe839bc712bb4a,
     type: 3}
 --- !u!114 &4674996494713867822
