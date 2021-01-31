@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cad2ece1eb5374093ea735442a4f00, type: 3}
+  m_Name: Note4
+  m_EditorClassIdentifier: 
+  noteText: "It\u2019s oh so much clearer now. Someone IS here with me. I can hear
+    them. I can. Really. Because they stink. Lying in that puddle there. White robes,
+    silver tubes but oh so familiar. And delicious. Oh, be still my starving fingers!
+    It can tell me why my head hurts. Why I can\u2019t feel my face. Like wet clay.
+    Like pudding but in strips as it slides away. Was it mine? Is it still mine?
+    I can\u2019t resist. Like Christmas morning. Stare down at the pair of glassy
+    baubles. Unwrap the ribbons. Peel away the dripping imitation and reveal\u2026
+    Me."
+  noteNumber: 0

@@ -56,7 +56,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 833666465
   m_Mesh: {fileID: 0}
-  m_InstanceId: 67824
+  m_InstanceId: 104060
 --- !u!1 &273461695914041319
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   doorways:
   - {fileID: 6206513686423360660}
   - {fileID: 7966981701072582423}
-  keySpawnLocation: {fileID: 0}
+  keySpawnLocation: {fileID: 5949019375953104650}
 --- !u!61 &9198330741771710061
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -840,7 +840,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 833666465
   m_Mesh: {fileID: 0}
-  m_InstanceId: 67852
+  m_InstanceId: 104088
 --- !u!1 &7966981701072582423
 GameObject:
   m_ObjectHideFlags: 0
@@ -941,7 +941,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -307130
+      value: -692346
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -1111,7 +1111,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -307144
+      value: -692360
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
@@ -1206,7 +1206,7 @@ PrefabInstance:
     - target: {fileID: 4417638580078492605, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}
       propertyPath: m_InstanceId
-      value: -307152
+      value: -692368
       objectReference: {fileID: 0}
     - target: {fileID: 4969860700502477063, guid: bf2872e6a6e2873429c1007c7b22c232,
         type: 3}

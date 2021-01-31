@@ -177,7 +177,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -161257549
   m_Mesh: {fileID: 0}
-  m_InstanceId: 100622
+  m_InstanceId: 108894
 --- !u!1 &4195797030466894312
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: -2086295965
   m_Mesh: {fileID: 0}
-  m_InstanceId: 100670
+  m_InstanceId: 108946
 --- !u!1 &4735382379526483185
 GameObject:
   m_ObjectHideFlags: 0
@@ -291,7 +291,7 @@ MonoBehaviour:
   - {x: 0.50005794, y: -0.5022249, z: 0}
   m_ShapePathHash: -2045413565
   m_Mesh: {fileID: 0}
-  m_InstanceId: 100618
+  m_InstanceId: 108890
 --- !u!1 &5917116153669969403
 GameObject:
   m_ObjectHideFlags: 0
@@ -378,7 +378,7 @@ MonoBehaviour:
   - {x: 0.5007311, y: -0.5005291, z: 0}
   m_ShapePathHash: 1061000927
   m_Mesh: {fileID: 0}
-  m_InstanceId: 100628
+  m_InstanceId: 108900
 --- !u!1 &6032058542178275380
 GameObject:
   m_ObjectHideFlags: 0
@@ -552,7 +552,7 @@ MonoBehaviour:
   - {fileID: 5917116153669969403}
   - {fileID: 9189249031027126776}
   - {fileID: 3005554107799707126}
-  keySpawnLocation: {fileID: 0}
+  keySpawnLocation: {fileID: 6265562082525304505}
 --- !u!61 &3433043145835311156
 BoxCollider2D:
   m_ObjectHideFlags: 0

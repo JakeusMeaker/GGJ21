@@ -19,12 +19,19 @@ public class Key : MonoBehaviour
             text.text = "Picked up the key!";
             CharacterController player = collision.GetComponent<CharacterController>();
             player.pickedUpExitKey = true;
-            Destroy(gameObject);
+            StartCoroutine(Despawn());
         }
+    }
+
+    IEnumerator Despawn()
+    {
+        yield return new WaitForSeconds(3f);
+        text.text = "";
+        Destroy(gameObject);
     }
 
     private void OnDestroy()
     {
-        text.text = "";
+        
     }
 }

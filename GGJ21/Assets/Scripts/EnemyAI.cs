@@ -16,6 +16,14 @@ public class EnemyAI : MonoBehaviour
     public AudioClip[] closerSounds;
     public AudioClip[] chaseSounds;
 
+    public AudioClip calmMusic;
+    public AudioClip tenseMusic;
+    public AudioClip chaseMusic;
+
+    public AudioSource musicSource;
+
+    public SceneChanger sceneChanger;
+
     [SerializeField] Sprite defaultSprite;
 
     private float horizontal;
@@ -47,6 +55,7 @@ public class EnemyAI : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         sr.sprite = defaultSprite;
 
+       
         StartCoroutine(MonsterSounds());
     }
 
@@ -255,7 +264,7 @@ public class EnemyAI : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.otherCollider.name == "Player")
+        if (collision.gameObject.name == "Player")
         {
             Debug.Log("I FOUND MY NEW FACE");
             Attack();
@@ -265,7 +274,7 @@ public class EnemyAI : MonoBehaviour
     void Attack()
     {
         //play sound
-        //do spooky stuff
+        sceneChanger.FailScene();
     }
 
     void OnPathComplete(Path p)

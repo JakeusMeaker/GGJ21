@@ -56,7 +56,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 833666465
   m_Mesh: {fileID: 0}
-  m_InstanceId: 93888
+  m_InstanceId: 104502
 --- !u!1 &3608854191737347536
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   doorways:
   - {fileID: 4112834946619686038}
   - {fileID: 8039904491083864929}
-  keySpawnLocation: {fileID: 0}
+  keySpawnLocation: {fileID: 7418585118407758543}
 --- !u!61 &1578089227589279211
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 833666465
   m_Mesh: {fileID: 0}
-  m_InstanceId: 93914
+  m_InstanceId: 104528
 --- !u!1 &8039904491083864929
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,6 +14,8 @@ public class LevelGeneration : MonoBehaviour
     public GameObject endRoom;
     public GameObject key;
 
+    public GameObject[] notes;
+
     public GameObject doorHorizontal;
     public GameObject doorVertical;
 
@@ -186,10 +188,25 @@ public class LevelGeneration : MonoBehaviour
                 CheckDoors(newRoom.GetComponent<RoomType>().doorways, true);
 
                 int rndNo = Random.Range(0, doorChecker.Count);
-                if (doorChecker[rndNo] != null)
+
+                while (true)
                 {
-                    RoomType keySpwnRoom = doorChecker[rndNo].GetComponent<RoomType>();
-                    Instantiate(key, keySpwnRoom.keySpawnLocation);
+                    if (doorChecker[rndNo] != null)
+                    {
+                        RoomType keySpwnRoom = doorChecker[rndNo].GetComponent<RoomType>();
+                        Instantiate(key, keySpwnRoom.keySpawnLocation);
+                        break;
+                    }
+                }
+
+                for (int i = 0; i < notes.Length; i++)
+                {
+                    int newRndNo = Random.Range(0, doorChecker.Count);
+                    if (doorChecker[newRndNo] != null)
+                    {
+                        RoomType keySpwnRoom = doorChecker[newRndNo].GetComponent<RoomType>();
+                        notes[i].transform.position = keySpwnRoom.keySpawnLocation.position;
+                    }
                 }
 
                 for (int i = 0; i < doorChecker.Count - 1; i++)

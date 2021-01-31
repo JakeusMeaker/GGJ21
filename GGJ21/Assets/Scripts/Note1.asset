@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cad2ece1eb5374093ea735442a4f00, type: 3}
+  m_Name: Note1
+  m_EditorClassIdentifier: 
+  noteText: "What on earth is going on? I\u2019d been the only patient on my ward
+    for weeks, but now there\u2019s no one here at all. Doctor Miller told me that
+    they were short-staffed, they\u2019d had to a few of the doctors to other wards,
+    and he\u2019d be checking on me from now on. But that was days ago, and I haven\u2019t
+    seen him since. I haven\u2019t seen anyone! I stayed in my bed for about two
+    days. I think? Eventually, I got too hungry, so I\u2019ve been eating from a
+    box of puddings I found outside of my door since then. I\u2019m so weak I can
+    barely stand, let alone walk, and I have a headache that just seems to be getting
+    worse. Someone will come back to get me soon. Anyway, as there\u2019s nothing
+    to read, I suppose I will keep writing this. Perhaps I can give it to my lawyer."
+  noteNumber: 0

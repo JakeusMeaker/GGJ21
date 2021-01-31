@@ -12,27 +12,28 @@ public class SceneChanger : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("MainGameScene");
+        SceneManager.LoadScene("MainGameScene", LoadSceneMode.Single);
     }
 
     public void ExitGame()
     {
+        Debug.Log("Quit");
         Application.Quit();
     }
 
     public void StartMenu()
     {
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene("StartScene", LoadSceneMode.Single);
     }
 
     public void WinScene()
     {
-        SceneManager.LoadScene("SucessScene");
+        SceneManager.LoadScene("SucessScene", LoadSceneMode.Single);
     }
 
     public void FailScene()
     {
-        SceneManager.LoadScene("EndScene");
+        SceneManager.LoadScene("EndScene", LoadSceneMode.Single);
     }
 
 }

@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cad2ece1eb5374093ea735442a4f00, type: 3}
+  m_Name: Note2
+  m_EditorClassIdentifier: 
+  noteText: "I was feeling a bit stronger. I can walk now, so I decided to try and
+    find someone. Or even just get out of the hospital. But the place is a labyrinth.
+    I couldn\u2019t for the life of me remember where my ward was in relation to
+    the others, and there\u2019s no signs or maps or anything. And that got me thinking.
+    I can\u2019t even remember the name of the hospital. I can\u2019t remember why
+    I\u2019m in here at all. My head is STILL killing me, so maybe that\u2019s it,
+    but I don\u2019t think I had the headache a few days ago. I honestly can\u2019t
+    remember\u2026"
+  noteNumber: 0

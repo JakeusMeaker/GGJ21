@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Room
   - PlayerUI
+  - Notes
+  - LevelManager
   layers:
   - Default
   - TransparentFX

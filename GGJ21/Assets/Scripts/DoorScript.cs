@@ -7,9 +7,12 @@ public class DoorScript : MonoBehaviour
 {
     Text text;
 
+    SceneChanger levelManager;
+
     private void Start()
     {
         text = GameObject.FindGameObjectWithTag("PlayerUI").GetComponent<Text>();
+        levelManager = GameObject.FindGameObjectWithTag("LevelManager").GetComponent<SceneChanger>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -21,9 +24,11 @@ public class DoorScript : MonoBehaviour
             if (hasKey)
             {
                 text.text = "You unlocked the door";
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetButton("Jump"))
                 {
                     //win
+                    Debug.Log("Freedom");
+                    levelManager.WinScene();
                 }
             }
             else if (!hasKey)

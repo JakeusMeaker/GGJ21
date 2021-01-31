@@ -263,7 +263,7 @@ MonoBehaviour:
   - {fileID: 6721701490160705800}
   - {fileID: 2708647303907331972}
   - {fileID: 1828806472236929916}
-  keySpawnLocation: {fileID: 0}
+  keySpawnLocation: {fileID: 995951433898558036}
 --- !u!61 &4362367928844075602
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -398,7 +398,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 1467128182
   m_Mesh: {fileID: 0}
-  m_InstanceId: 94346
+  m_InstanceId: 105316
 --- !u!1 &7438802878987693518
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +455,7 @@ MonoBehaviour:
   - {x: 0.5016743, y: -0.5009165, z: 0}
   m_ShapePathHash: -2045268427
   m_Mesh: {fileID: 0}
-  m_InstanceId: 94360
+  m_InstanceId: 105330
 --- !u!1 &8436188319048444198
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,7 +569,7 @@ MonoBehaviour:
   - {x: -2.499529, y: -0.501402, z: 0}
   m_ShapePathHash: 833666465
   m_Mesh: {fileID: 0}
-  m_InstanceId: 94372
+  m_InstanceId: 105342
 --- !u!1001 &4329426886795907632
 PrefabInstance:
   m_ObjectHideFlags: 0

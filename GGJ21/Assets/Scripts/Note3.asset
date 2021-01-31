@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4cad2ece1eb5374093ea735442a4f00, type: 3}
+  m_Name: Note3
+  m_EditorClassIdentifier: 
+  noteText: "The power has gone. Sitting. I\u2019m just. Sitting, waiting. And it\u2019s
+    suddenly just- CLACK. And there\u2019s no lights. I can\u2019t find anything.
+    The wards all look the same and I can\u2019t find ANYTHING. So I\u2019m sitting.
+    I\u2019m sitting trying to remember why I\u2019m here. And there go the lights!
+    It\u2019s awful. Anyway, I keep sitting. In the dark now. And I hear someone.
+    Something? It sounds like they\u2019re calling for me but my head hurts SO MUCH
+    that my face is going numb. And my thoughts are slipping through my brain like
+    snakes over glass. Is it just in my mind? Should I find them? Should I hide?
+    Should I just\u2026 keep sitting?"
+  noteNumber: 0
