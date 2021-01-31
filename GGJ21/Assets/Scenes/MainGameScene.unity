@@ -2469,28 +2469,8 @@ PrefabInstance:
       objectReference: {fileID: 512272261}
     - target: {fileID: 4674996494713867820, guid: ec2be720a3ec16c4ca6e6b352a09cb37,
         type: 3}
-      propertyPath: flashlightPositions.Array.data[3].y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674996494713867820, guid: ec2be720a3ec16c4ca6e6b352a09cb37,
-        type: 3}
-      propertyPath: flashlightPositions.Array.data[3].z
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674996494713867820, guid: ec2be720a3ec16c4ca6e6b352a09cb37,
-        type: 3}
-      propertyPath: flashlightPositions.Array.data[0].x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674996494713867820, guid: ec2be720a3ec16c4ca6e6b352a09cb37,
-        type: 3}
-      propertyPath: flashlightPositions.Array.data[0].z
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 4674996494713867820, guid: ec2be720a3ec16c4ca6e6b352a09cb37,
-        type: 3}
-      propertyPath: flashlightPositions.Array.data[1].z
-      value: 90
+      propertyPath: pickedUpExitKey
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4674996494713867821, guid: ec2be720a3ec16c4ca6e6b352a09cb37,
         type: 3}
