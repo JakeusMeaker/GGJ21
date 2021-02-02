@@ -271,7 +271,7 @@ public class LevelGeneration : MonoBehaviour
                 case "CheckPointRight":
                     Vector2 startR = doorways[i].transform.position;
                     Vector2 endR = startR + new Vector2(5, 0);
-                    RaycastHit2D resultR = Physics2D.Linecast(startR, endR);
+                    RaycastHit2D resultR = Physics2D.Linecast(startR, endR, linecastColliders);
                     if (resultR.collider == null)
                     {
                         if (!lastRoom)
@@ -287,7 +287,7 @@ public class LevelGeneration : MonoBehaviour
                 case "CheckPointUp":
                     Vector2 startU = doorways[i].transform.position;
                     Vector2 endU = startU + new Vector2(0, 5);
-                    RaycastHit2D resultU = Physics2D.Linecast(startU, endU);
+                    RaycastHit2D resultU = Physics2D.Linecast(startU, endU, linecastColliders);
                     if (resultU.collider == null)
                     {
                         if (!lastRoom)
@@ -303,7 +303,7 @@ public class LevelGeneration : MonoBehaviour
                 case "CheckPointDown":
                     Vector2 startD = doorways[i].transform.position;
                     Vector2 endD = startD + new Vector2(0, -5);
-                    RaycastHit2D resultD = Physics2D.Linecast(startD, endD);
+                    RaycastHit2D resultD = Physics2D.Linecast(startD, endD, linecastColliders);
                     if (resultD.collider == null)
                     {
                         if (!lastRoom)

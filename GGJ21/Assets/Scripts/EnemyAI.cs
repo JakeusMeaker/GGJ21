@@ -55,7 +55,7 @@ public class EnemyAI : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         sr.sprite = defaultSprite;
 
-       
+
         StartCoroutine(MonsterSounds());
     }
 
@@ -111,8 +111,8 @@ public class EnemyAI : MonoBehaviour
         //horizontal += velocity.x * Time.deltaTime;
         //vertical += velocity.y * Time.deltaTime;
 
-        horizontal = dir.x * runSpeed * Time.deltaTime;
-        vertical = dir.y * runSpeed * Time.deltaTime;
+        horizontal = dir.x;
+        vertical = dir.y;
 
         if (horizontal > 0.5f)
         {
@@ -245,14 +245,17 @@ public class EnemyAI : MonoBehaviour
         }
         else
         {
-            currentTargetPoint = Random.Range(2, patrolRooms.Count);
-            if (patrolRooms[currentTargetPoint] != null)
+            if (targetPosition.gameObject.name != "Player")
             {
-                targetPosition = patrolRooms[currentTargetPoint].transform;
-            }
-            else
-            {
-                SetPath();
+                currentTargetPoint = Random.Range(2, patrolRooms.Count);
+                if (patrolRooms[currentTargetPoint] != null)
+                {
+                    targetPosition = patrolRooms[currentTargetPoint].transform;
+                }
+                else
+                {
+                    SetPath();
+                }
             }
         }
     }

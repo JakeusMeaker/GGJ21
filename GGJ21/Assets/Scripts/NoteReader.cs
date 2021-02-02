@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class NoteReader : MonoBehaviour
 {
-    Text noteText;
     Text UIText;
 
-    public GameObject notePanel;
+    public Text noteText;
+    public Image notePanel;
     public NoteSO so;
 
     bool reading = false;
@@ -17,7 +17,6 @@ public class NoteReader : MonoBehaviour
 
     private void Start()
     {
-        noteText = GameObject.FindGameObjectWithTag("Notes").GetComponent<Text>();
         UIText = GameObject.FindGameObjectWithTag("PlayerUI").GetComponent<Text>();
     }
 
@@ -27,15 +26,14 @@ public class NoteReader : MonoBehaviour
         {
             Debug.Log("spacepressed");
             reading = true;
-            notePanel.SetActive(true);
-            noteText = GameObject.FindGameObjectWithTag("Notes").GetComponent<Text>();
             noteText.text = so.noteText;
+            notePanel.enabled = true;
         }
-        else if (Input.GetButtonUp("Jump") && reading)
+        else if (Input.GetButtonDown("Jump") && reading )
         {
             reading = false;
             noteText.text = "";
-            notePanel.SetActive(false);
+            notePanel.enabled = false;
         }
     }
 
@@ -46,9 +44,11 @@ public class NoteReader : MonoBehaviour
             UIText.text = "Read note?";
             near = true;
         }
-        else
-        {
-            near = false;
-        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        UIText.text = "";
+        near = false;
     }
 }
