@@ -11,11 +11,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip tense;
     public AudioClip chasing;
     
-    AudioSource audio;
+    private AudioSource audioSource;
 
     private void Start()
     {
-        audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -23,30 +23,28 @@ public class AudioManager : MonoBehaviour
     {
         if(Vector2.Distance(player.transform.position, monster.transform.position) > 20)
         {
-            if(audio.clip != calm)
+            if(audioSource.clip != calm)
             {
-                audio.clip = calm;
-                audio.volume = 0.2f;
-                audio.pitch = -0.45f;
-                audio.Play();
+                audioSource.clip = calm;
+                audioSource.volume = 0.2f;
+                audioSource.Play();
             }
         }
-        //else if (Vector2.Distance(player.transform.position, monster.transform.position) < 20 
-        //            && Vector2.Distance(player.transform.position, monster.transform.position) > 10)
-        //{
-        //    if (audio.clip != tense)
-        //    {
-        //        audio.clip = tense;
-        //        audio.Play();
-        //    }
-        //}
+        else if (Vector2.Distance(player.transform.position, monster.transform.position) < 20
+                    && Vector2.Distance(player.transform.position, monster.transform.position) > 10)
+        {
+            if (audioSource.clip != tense)
+            {
+                audioSource.clip = tense;
+                audioSource.Play();
+            }
+        }
         else if (Vector2.Distance(player.transform.position, monster.transform.position) < 10)
         {
-            if (audio.clip != tense)
+            if (audioSource.clip != chasing)
             {
-                audio.clip = tense;
-                audio.pitch = 0.45f;
-                audio.Play();
+                audioSource.clip = chasing;
+                audioSource.Play();
             }
         }
     }

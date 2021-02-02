@@ -14,7 +14,7 @@ public class CharacterController : MonoBehaviour
 
     public bool pickedUpExitKey = false;
 
-    [SerializeField]private Sprite defaultSprite;
+    public Sprite defaultSprite;
 
     private float horizontal;
     private float vertical;

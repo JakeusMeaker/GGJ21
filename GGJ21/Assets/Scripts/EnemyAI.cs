@@ -24,7 +24,7 @@ public class EnemyAI : MonoBehaviour
 
     public SceneChanger sceneChanger;
 
-    [SerializeField] Sprite defaultSprite;
+    public Sprite defaultSprite;
 
     private float horizontal;
     private float vertical;
@@ -44,7 +44,6 @@ public class EnemyAI : MonoBehaviour
     private int currentTargetPoint = 0;
 
     private bool isChasing = false;
-    private bool playingSound = false;
 
     // Start is called before the first frame update
     void Start()

@@ -223,7 +223,7 @@ public class LevelGeneration : MonoBehaviour
                 if (doorChecker[newRndNo] != null && keySpwnRoom.keySpawnLocation != key.transform)
                 {
                     notes[i].transform.position = keySpwnRoom.keySpawnLocation.position;
-                    break;s
+                    break;
                 }
             }
         }
