@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1236,7 +1236,6 @@ GameObject:
   m_Component:
   - component: {fileID: 937989010}
   - component: {fileID: 937989009}
-  - component: {fileID: 937989011}
   m_Layer: 0
   m_Name: LevelGeneration
   m_TagString: Notes
@@ -1329,22 +1328,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &937989011
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 937989008}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.5
 --- !u!1 &998282464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1495,7 +1478,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.27250043, y: 0.04333363}
   m_AnchorMax: {x: 0.72625023, y: 0.95000005}
-  m_AnchoredPosition: {x: 0.5, y: 2.0000305}
+  m_AnchoredPosition: {x: 0.5, y: 2}
   m_SizeDelta: {x: -0.47607422, y: 3.5491333}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1106715050
@@ -1676,7 +1659,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 4913f18a967b2e1429e9d1512bb9e8d5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.3
-  m_Pitch: 1
+  m_Pitch: -0.45
   Loop: 1
   Mute: 0
   Spatialize: 0

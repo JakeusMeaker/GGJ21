@@ -27,23 +27,25 @@ public class AudioManager : MonoBehaviour
             {
                 audio.clip = calm;
                 audio.volume = 0.2f;
+                audio.pitch = -0.45f;
                 audio.Play();
             }
         }
-        else if (Vector2.Distance(player.transform.position, monster.transform.position) < 20 
-                    && Vector2.Distance(player.transform.position, monster.transform.position) > 10)
+        //else if (Vector2.Distance(player.transform.position, monster.transform.position) < 20 
+        //            && Vector2.Distance(player.transform.position, monster.transform.position) > 10)
+        //{
+        //    if (audio.clip != tense)
+        //    {
+        //        audio.clip = tense;
+        //        audio.Play();
+        //    }
+        //}
+        else if (Vector2.Distance(player.transform.position, monster.transform.position) < 10)
         {
             if (audio.clip != tense)
             {
                 audio.clip = tense;
-                audio.Play();
-            }
-        }
-        if (Vector2.Distance(player.transform.position, monster.transform.position) < 7.5)
-        {
-            if (audio.clip != chasing)
-            {
-                audio.clip = chasing;
+                audio.pitch = 0.45f;
                 audio.Play();
             }
         }
