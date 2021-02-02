@@ -25,7 +25,7 @@ public class Key : MonoBehaviour
 
     IEnumerator Despawn()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(0.5f);
         text.text = "";
         Destroy(gameObject);
     }

@@ -12,7 +12,7 @@ public class CharacterController : MonoBehaviour
     public Vector3[] flashlightRotations; // 0 = down , 1 = left, 2 = top, 3 = right
     public Vector3[] flashlightPositions;
 
-    public bool pickedUpExitKey;
+    public bool pickedUpExitKey = false;
 
     [SerializeField]private Sprite defaultSprite;
 

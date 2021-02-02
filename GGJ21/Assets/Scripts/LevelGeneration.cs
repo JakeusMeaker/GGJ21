@@ -187,27 +187,7 @@ public class LevelGeneration : MonoBehaviour
 
                 CheckDoors(newRoom.GetComponent<RoomType>().doorways, true);
 
-                int rndNo = Random.Range(0, doorChecker.Count);
-
-                while (true)
-                {
-                    if (doorChecker[rndNo] != null)
-                    {
-                        RoomType keySpwnRoom = doorChecker[rndNo].GetComponent<RoomType>();
-                        Instantiate(key, keySpwnRoom.keySpawnLocation);
-                        break;
-                    }
-                }
-
-                for (int i = 0; i < notes.Length; i++)
-                {
-                    int newRndNo = Random.Range(0, doorChecker.Count);
-                    if (doorChecker[newRndNo] != null)
-                    {
-                        RoomType keySpwnRoom = doorChecker[newRndNo].GetComponent<RoomType>();
-                        notes[i].transform.position = keySpwnRoom.keySpawnLocation.position;
-                    }
-                }
+                SpawnItems();
 
                 for (int i = 0; i < doorChecker.Count - 1; i++)
                 {
@@ -220,6 +200,31 @@ public class LevelGeneration : MonoBehaviour
 
                 SetPlayerMonsterPositions();
                 SpawnGraphGrid();
+            }
+        }
+    }
+
+    void SpawnItems()
+    {
+        int rndNo = Random.Range(0, doorChecker.Count);
+        if (doorChecker[rndNo] != null)
+        {
+            RoomType keySpwnRoom = doorChecker[rndNo].GetComponent<RoomType>();
+            key.transform.position = keySpwnRoom.keySpawnLocation.position;
+        }
+
+
+        for (int i = 0; i < notes.Length; i++)
+        {
+            while (true)
+            {
+                int newRndNo = Random.Range(0, doorChecker.Count);
+                RoomType keySpwnRoom = doorChecker[newRndNo].GetComponent<RoomType>();
+                if (doorChecker[newRndNo] != null && keySpwnRoom.keySpawnLocation != key.transform)
+                {
+                    notes[i].transform.position = keySpwnRoom.keySpawnLocation.position;
+                    break;
+                }
             }
         }
     }

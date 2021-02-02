@@ -176,7 +176,7 @@ public class EnemyAI : MonoBehaviour
                 if (distanceToPlayer > 20)
                 {
                     Debug.Log("Playing distant sound");
-                    audioSource.volume = 0.3f;
+                    audioSource.volume = 0.5f;
                     audioSource.pitch = Random.Range(0.5f, 1.5f);
                     audioSource.PlayOneShot(distantSounds[Random.Range(0, distantSounds.Length)]);
                     yield return null;
@@ -185,7 +185,7 @@ public class EnemyAI : MonoBehaviour
                 else if (distanceToPlayer > 10 && distanceToPlayer < 20)
                 {
                     Debug.Log("Playing closer sound");
-                    audioSource.volume = 0.6f;
+                    audioSource.volume = 0.8f;
                     audioSource.pitch = Random.Range(0.5f, 1.5f);
                     audioSource.PlayOneShot(closerSounds[Random.Range(0, closerSounds.Length)]);
                     yield return null;

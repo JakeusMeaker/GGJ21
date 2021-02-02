@@ -10,6 +10,7 @@ public class DoorScript : MonoBehaviour
     SceneChanger levelManager;
 
     bool near = false;
+    bool canWin = false;
 
     private void Start()
     {
@@ -19,7 +20,7 @@ public class DoorScript : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButton("Jump") && near)
+        if (Input.GetButton("Jump") && near && canWin)
         {
             //win
             Debug.Log("Freedom");
@@ -29,7 +30,7 @@ public class DoorScript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.name == "Player")
+        if (collision.name == "Player")
         {
             bool hasKey = collision.GetComponent<CharacterController>().pickedUpExitKey;
 
@@ -37,6 +38,7 @@ public class DoorScript : MonoBehaviour
             {
                 text.text = "You unlocked the door";
                 near = true;
+                canWin = true;
             }
             else if (!hasKey)
             {
@@ -44,14 +46,11 @@ public class DoorScript : MonoBehaviour
                 near = true;
             }
         }
-        else
-        {
-            near = false;
-        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         text.text = "";
+        near = false;
     }
 }
